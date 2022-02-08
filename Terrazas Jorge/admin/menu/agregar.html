@@ -9,20 +9,121 @@
 </head>
 <body>
     <header class="header">
-
         <h1>BIBLIOTECA VIRTUAL</h1>
-
     </header>
+
     <nav>
         <a href="/admin/home_admin.html">Inicio</a>
-
     </nav>
+
     <main>
         <h2>Agregar</h2>
 
+        <form name="form-agrega" action="mailto:jor_99_m@hotmail.com" method="post">
+            
+                
+         
+            <div>
+                <label for="tipo">Tipo </label>
+                <select name="tipo" id="tipo">
+                    <option value="articulos">Articulos</option>
+                    <option value="libros">Libros</option>
+                    <option value="revistas">Revistas</option>
+                    <option value="tesis">Tesis</option>
+                   
+                </select>
+            </div>
+
+         
+            <div>
+                <label for="especialidad">Elige especialidad</label> 
+               
+                <select id="especialidad" name="especialidad" >
+                   
+                    <optgroup label="ing_agroindustrial">
+                        
+                        <option value="bionegocios">Bionegocios</option>
+                        <option value="gestion_recursos">Gestion de recursos hidrobiologicos</option>
+                        <option value="negocios_agro">Negocios agroindustrial</option>
+                        <option value="topicos">Topicos</option>
+
+                    </optgroup>
+                    <optgroup label="ing_industrial">
+                        <option value="ig_calidad">Ingenieria de calidad</option>
+                        <option value="auto_manufactura">Automatización de la manufactura </option>
+                        <option value="pye">Producto y estrategia</option>
+                        <option value="mc_capi">Mercado de Capitales</option>
+                    </optgroup>
+                    <optgroup label="ing_sistemas">
+                        <option value="d_software">Desarrollo de software</option>
+                        <option value="s_info">Seguridad informatica</option>
+                        <option value="g_sistemas">Gestor de sistemas </option>
+                        <option value="admin_tecnologias">Administrador de tecnologias de la información</option>
+
+                    </optgroup>
+                    <optgroup label="Transporte">
+                        <option value="t_transport">Tecnologia de transporte</option>
+                        <option value="g_calidad">Gestion calidad</option>
+                        <option value="ig_mant">Ingenieria de mantenimiento</option>
+                        <option value="simu_sistemas">Simulación de sistemas</option>
+
+                    </optgroup>
 
 
-        
+
+                </select>
+            </div>
+            
+            <div>
+                 <label for="codigo">Codigo</label> 
+                 <input type="text" name="codigo" id="codigo">
+            </div>
+          
+            <div>
+                <label for="titulo">Titulo</label> 
+                <input type="text" name="titulo" id="titulo">
+
+            </div>
+
+            
+            <div>
+                 <label for="autor">Autor</label>
+                 <input type="text" name="autor" id="autor">
+            </div>
+          
+            <div>
+                <label for="fecha">Fecha de publicación</label>
+                <input type="text" name="fecha" id="fecha">
+            </div>
+            
+            <div>
+                 <label for="fuente">Fuente</label>
+                 <input type="text" name="fuente"  id="fuente" >
+
+            </div>
+
+
+            <div>
+                <label for="imagen">  Subir imagen </label>    
+                <input type="file"  name="foto_admin" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4">  
+
+            </div>
+          
+
+            <div>
+                <label for="pdf">Subir pdf</label>  
+                <input type="file" name="pdf">
+            </div>
+          
+
+            <div>
+                <input type="reset" value="Limpiar">
+                <input type="submit" value="Guardar ">
+            </div>
+             
+
+        </form>
+ 
     </main>
     <footer >
         <hr  />
