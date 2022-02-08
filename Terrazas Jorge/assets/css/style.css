@@ -74,6 +74,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 a:hover{
     color: rgb(60, 165, 147);
 }
