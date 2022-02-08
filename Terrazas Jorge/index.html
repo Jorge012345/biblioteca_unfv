@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header class="header-login">
+        <h1>Biblioteca UNFV</h1>
+    </header>
+    <main>
+
+        <p class="description-login">Universidad Nacional Federico Villarreal.</p>
+        <div class="login">
+            <form name="form-login" method="POST">
+
+                <div>
+                    <input class="inputLogin" type="email" placeholder="Correo Electrónico" name="txtEmail" required>
+                </div>
+                <div>
+
+                    <input class="inputLogin" type="password" placeholder="Contraseña" name="txtPassword" required>
+                </div>
+                <div>
+                    <input class="inputLogin" list="tipos" placeholder="Tipo:">
+
+                    <datalist id="tipos">
+                        <option value="Docente">Docente</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Administrador">Administrador</option>
+                    </datalist>
+
+                </div>
+
+                <div>
+                    <button class="btn btn--login" type="submit" name="bntEntrar">Iniciar Sesión</button>
+                </div>
+
+
+                <div>
+
+                    <a class="btn btn--registrarse" role="button" href="registro_usuario.html">Registrarse</a>
+                </div>
+
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+    <!-- footer -->
+    <footer>
+        <p><a href="/index.html">Cerrar Sesión</a></p>
+        <!--Copyright-->
+        <p>Copyright © 2022</p>
+    </footer>
+
+</body>
+
+</html>

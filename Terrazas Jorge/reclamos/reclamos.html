@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1>BIBLIOTECA VIRTUAL</h1>
+
+    </header>
+    <nav>
+        <a  href="/home.html">Inicio</a>
+        <a  href="/acerca_de.html">Acerca de</a>
+        <a  href="/horario_atencion.html">Horario de atención</a>
+        <a  href="/consulta.html">Consulta</a>
+
+    </nav>
+    <main >
+        <h2 >Ingresa tu Reclamo</h2>
+        <form name="form-consulta" action="mailto:jor_99_m@hotmail.com" method="post">
+            <fieldset class="contenido-solicitud">
+                
+               
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="txtNombre" id="nombre" required autofocus>
+                    <abbr title="required">*</abbr>
+                </p>
+
+                <p>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="txtApellido" required>
+                    <abbr title="required">*</abbr>
+                </p>
+                <p>
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="txtCorreo" required>
+                    <abbr title="required">*</abbr>
+                </p>
+              
+                <p>1.Identifica el motivo del reclamo: </p>
+
+                <p class="parrafosReclamo">
+                    <label><input type="checkbox" value="1">Trato profesional en la atencion:la persona que te atendi&oacute; no lo hizo de forma adecuada  </label>
+                    <label><input type="checkbox"  value="2">Tiempo:hubo demora antes y/o durante la atenci&oacute;n que recibiste </label>
+                    <label><input type="checkbox" value="3">Procedimiento: no se siguió el procedimiento de atención o no estás de acuerdo con este. </label>
+                    <label><input type="checkbox" value="4">Informaci&oacute;n: la orientación sobre el servicio fue inadecuada, insuficiente o  imprecisa 
+                    <label><input type="checkbox" value="5">Resultado:no se pudo obtener un resultado concreto como parte del servicio y/o no se justifica la negativa en la atención del servicio.</label>
+                    <label><input type="checkbox" value="6">Confianza:ocurrió una situación que afectó la confianza y credibilidad de la entidad.</label>
+                    <label><input type="checkbox" value="7">Disponibilidad:el medio de atención (virtual, presencial o telefónico) por el que se brinda el servicio no responde a tus expectativas o tiene horarios restringidos.</label>
+                    <label><input type="checkbox" value="8">Otro</label>
+                </p>
+
+                <p>
+                    2.¿Trataron de darle una solución previa al registro del reclamo?
+                </p>
+                <p>
+                    <input type="radio" name="solucion" value="si">si <br>
+                    <input type="radio" name="solucion" value="no">no
+                </p>
+
+                <p>
+                    3.¿cuando ocurrio la situaci&oacute;n que origina el siguiente reclamo?
+                </p>
+                <p>
+                    <input type="date" name="fecha">
+                </p>
+                <p>
+                    4.¿Aproximadamente a que hora ocurrio?
+                </p>
+                <p>
+                    <input type="time" name="hora">
+                </p>
+                <p>
+                    5.Descríbenos ¿que sucedió?. Detalla cuál fue el problema que ocasionó que presentes este reclamo de la manera más detallada posible.
+                </p>
+
+
+                <p>
+                    <textarea name="textoreclamo" cols="60" rows="15" placeholder="escriba aqui..." required></textarea>
+                </p>
+
+                <p>
+                    6.Adjuntar archivo (opcional) fotos, videos y/o textos que ayuden a evidenciar tu reclamo.
+                </p>
+                <p>
+                    <input type="file"  name="foto" accept=".jpg,.jpeg,.png,.mp3,.mp4">  
+                </p>
+
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+ 
+                <p>
+                    <input  type="reset" value="Limpiar campos">
+
+                </p>
+
+
+            </fieldset>
+
+        </form>
+       
+    </main>
+
+
+    <footer>
+        <hr/>
+        <p><a href="/index.html">Cerrar Sesión</a></p>
+        <!--Copyright-->
+        <p>Copyright © 2022</p>
+      </footer>
+</body>
+
+</html>
