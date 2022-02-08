@@ -8,7 +8,7 @@
 /*----------general------------------*/
 body{
     
-    background-color: rgb(229, 235, 235);
+    background-color: rgb(245, 245, 245);
     font-family: "Roboto", sans-serif;
     color: rgb(56, 78, 75);
     position: relative;
@@ -20,40 +20,6 @@ main{
     text-align: center;
     margin-bottom: 160px;
     
-}
-
-nav{
-    text-align: center; 
-    width: 100%; 
-    background-color: rgb(164, 182, 182); 
-    padding-top: 15px; 
-    padding-bottom: 15px; 
-    margin-bottom: 60px; 
-    font-size: 20px; 
-    font-weight: 700;
-
-}
-nav a{
-    margin-right: 40px;
-    position: relative;
-}
-nav a::before{
-    content:"";
-    position: absolute;
-    width:100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: rgb(60, 165, 147);
-
-    bottom: 0;
-    left:0;
-    transform-origin:right;
-    transform:scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-nav a:hover::before{
-    transform-origin: left;
-    transform: scaleX(1);
 }
 h2{
     text-align: center;
@@ -118,9 +84,47 @@ textarea {
 .header{
     text-align:center; 
     background-color: rgba(164, 182, 182, 0.76); 
-    padding-top: 1em; 
-    padding-bottom: 1em;
+    padding-top: 1.5em; 
+    padding-bottom: 3em;
 }
+/*--------------------NAVBAR------------------------*/
+nav{
+    text-align: center; 
+    width: 100%; 
+    background-color: rgb(164, 182, 182); 
+    padding-top: 15px; 
+    padding-bottom: 15px; 
+    margin-bottom: 60px; 
+    font-size: 20px; 
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+
+}
+nav a{
+    margin-right: 40px;
+    position: relative;
+}
+nav a::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgb(60, 165, 147);
+
+    bottom: 0;
+    left:0;
+    transform-origin:right;
+    transform:scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+nav a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
 /*-------------------HOME------------------*/
 .busqueda{
     width: 470px;
@@ -137,6 +141,10 @@ textarea {
 }
 
 /*-------------LOGIN---------------------*/
+.pag-login{
+    background-color:rgba(214, 208, 208, 0.753);
+}
+
 .login{
     background-color:rgba(255, 255, 255, 0.753);
     padding: 20px; 
