@@ -12,11 +12,23 @@
 
 <body>
     <header class="header">
-        <h1>Registrarse</h1>
+
+        <h1>BIBLIOTECA VIRTUAL ADMINISTRACION</h1>    
+    
     </header>
+
+    <nav>
+        <a href="/admin/home_admin.html">Inicio</a>
+        <a href="/admin/administracion/admi_alumnos.html">Alumnos</a>
+        <a href="/admin/administracion/admi_administradores.html">Administradores</a>
+        <a href="/admin/administracion/nuevo_administrador.html">Nuevo Administrador</a>
+
+    </nav>
+
     <main>
         <form name="form-registro" action="mailto:jor_99_m@hotmail.com" method="post">
             <fieldset class="contenido-solicitud">
+                <legend>Registre nuevo administrador</legend>
                 
                 <div>Los campos obligatorios se marcan con un <abbr title="required">*</abbr>.</div>
                 <div>
@@ -35,9 +47,11 @@
                     <input type="text" id="codigo" required>
                     <abbr title="required">*</abbr>
                 </div>
+
+
                 <div>
-                    <label for="dni">DNI:</label>
-                    <input type="text" id="dni" required>
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" required>
                     <abbr title="required">*</abbr>
                 </div>
 
@@ -49,25 +63,13 @@
 
                 <div>
                     <label for="contra">Contraseña:</label>
-                    <input type="email" id="contra" required>
+                    <input type="password" id="contra" required>
                     <abbr title="required">*</abbr>
                 </div>
+ 
 
                 <div>
-                    <label for="correo">Sexo:</label>
-
-                    <div>
-                        <label>Masculino</label><input type="radio" name="g" value="" required>
-                    </div>
-                    <div>
-                        <label>Femenino</label><input type="radio" name="g" value="" required>
-                    </div>
-                    <abbr title="required">*</abbr>
-                </div>
-
-
-                <div>
-                    <input type="submit" class="btn btn--solicitud" value="Enviar">
+                    <input type="submit" class="btn btn--solicitud" value="Guardar">
                 
                     <input type="reset" class="btn btn--solicitud" value="Limpiar campos">
 

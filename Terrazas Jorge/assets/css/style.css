@@ -67,6 +67,7 @@ td{
 th{
     padding: 10px;
     border: 2px solid rgb(143, 185, 174);
+    color: green;/*agregado*/
 }
 
 
