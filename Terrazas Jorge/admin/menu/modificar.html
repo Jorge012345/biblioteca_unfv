@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
     <header class="header">
 
@@ -21,143 +23,144 @@
         <h2>Modificar</h2>
 
         <form name="form-modifica" action="mailto:jor_99_m@hotmail.com" method="post">
-            
-            
-         
-            <div>
-                <label for="tipo">Tipo </label>
-                <select name="tipo" id="tipo">
-                    <option value="articulos">Articulos</option>
-                    <option value="libros">Libros</option>
-                    <option value="revistas">Revistas</option>
-                    <option value="tesis">Tesis</option>
-                   
-                </select>
-            </div>
 
-         
-            <div>
-                <label for="especialidad">Elige especialidad</label> 
-               
-                <select id="especialidad" name="especialidad" >
-                   
-                    <optgroup label="Ing_agroindustrial">
-                        
-                        <option value="bionegocios">Bionegocios</option>
-                        <option value="gestion_recursos">Gestion de recursos hidrobiologicos</option>
-                        <option value="negocios_agro">Negocios agroindustrial</option>
-                        <option value="topicos">Topicos</option>
+            <fieldset class="contenido-solicitud">
 
-                    </optgroup>
-                    <optgroup label="Ing_industrial">
-                        <option value="ig_calidad">Ingenieria de calidad</option>
-                        <option value="auto_manufactura">Automatización de la manufactura </option>
-                        <option value="pye">Producto y estrategia</option>
-                        <option value="mc_capi">Mercado de Capitales</option>
-                    </optgroup>
-                    <optgroup label="Ing_sistemas">
-                        <option value="d_software">Desarrollo de software</option>
-                        <option value="s_info">Seguridad informatica</option>
-                        <option value="g_sistemas">Gestor de sistemas </option>
-                        <option value="admin_tecnologias">Administrador de tecnologias de la información</option>
+                <div>
+                    <label for="tipo">Tipo </label>
+                    <select name="tipo" id="tipo">
+                        <option value="articulos">Articulos</option>
+                        <option value="libros">Libros</option>
+                        <option value="revistas">Revistas</option>
+                        <option value="tesis">Tesis</option>
 
-                    </optgroup>
-                    <optgroup label="Transporte">
-                        <option value="t_transport">Tecnologia de transporte</option>
-                        <option value="g_calidad">Gestion calidad</option>
-                        <option value="ig_mant">Ingenieria de mantenimiento</option>
-                        <option value="simu_sistemas">Simulación de sistemas</option>
-
-                    </optgroup>
-
-                </select>
-            </div>
-            
-            <div>
-                 <label for="codigo" >Codigo</label> 
-                 <input type="text" name="codigo" id="codigo"  >
-            </div>
-
-          
-            <div>
-                <label for="titulo">Titulo</label> 
-                <input type="text" name="titulo" id="titulo">
-            </div>
+                    </select>
+                </div>
 
 
+                <div>
+                    <label for="especialidad">Elige especialidad</label>
 
-            <div>
-                <label for="n_titulo">Nuevo titulo</label>
-                <input type="text" name="n_titulo" id="n_titulo">
-            </div>
+                    <select id="especialidad" name="especialidad">
+
+                        <optgroup label="Ing_agroindustrial">
+
+                            <option value="bionegocios">Bionegocios</option>
+                            <option value="gestion_recursos">Gestion de recursos hidrobiologicos</option>
+                            <option value="negocios_agro">Negocios agroindustrial</option>
+                            <option value="topicos">Topicos</option>
+
+                        </optgroup>
+                        <optgroup label="Ing_industrial">
+                            <option value="ig_calidad">Ingenieria de calidad</option>
+                            <option value="auto_manufactura">Automatización de la manufactura </option>
+                            <option value="pye">Producto y estrategia</option>
+                            <option value="mc_capi">Mercado de Capitales</option>
+                        </optgroup>
+                        <optgroup label="Ing_sistemas">
+                            <option value="d_software">Desarrollo de software</option>
+                            <option value="s_info">Seguridad informatica</option>
+                            <option value="g_sistemas">Gestor de sistemas </option>
+                            <option value="admin_tecnologias">Administrador de tecnologias de la información</option>
+
+                        </optgroup>
+                        <optgroup label="Transporte">
+                            <option value="t_transport">Tecnologia de transporte</option>
+                            <option value="g_calidad">Gestion calidad</option>
+                            <option value="ig_mant">Ingenieria de mantenimiento</option>
+                            <option value="simu_sistemas">Simulación de sistemas</option>
+
+                        </optgroup>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="codigo">Codigo</label>
+                    <input type="text" name="codigo" id="codigo">
+                </div>
+
+
+                <div>
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="titulo" id="titulo">
+                </div>
 
 
 
-            <div>
-                <label for="autor">Autor</label>
-                <input type="text" name="autor">
-            </div>
-
-            <div>
-                <label for="n_autor">Nuevo autor</label>
-                <input type="text" name="nuevo_autor" id="n_autor">
-            </div>
-            
-            <div>
-                <label for="fecha">Fecha de publicación</label>
-                <input type="text" name="fecha" id="fecha">
-            </div>
-            
-            <div>
-                <label for="n_fecha">Fecha de publicación</label>
-                <input type="text" name="fecha" id="n_fecha">
-            </div>
-            
-
-            
-            <div>
-                 <label for="fuente">Fuente</label>
-                 <input type="text" name="nuevo_fuente"  id="n_fuente" >
-
-            </div>
-
-            <div>
-                <label for="fuente">Nueva fuente</label>
-                <input type="text" name="n_fuente"  id="n_fuente" >
-
-           </div>
+                <div>
+                    <label for="n_titulo">Nuevo titulo</label>
+                    <input type="text" name="n_titulo" id="n_titulo">
+                </div>
 
 
-            <div>
-                <label for="imagen">  Nueva imagen </label>    
-                <input type="file"  name="foto_admin" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4">  
 
-            </div>
-          
+                <div>
+                    <label for="autor">Autor</label>
+                    <input type="text" name="autor">
+                </div>
 
-            <div>
-                <label for="pdf">Subir pdf</label>  
-                <input type="file" name="pdf">
-            </div>
-          
+                <div>
+                    <label for="n_autor">Nuevo autor</label>
+                    <input type="text" name="nuevo_autor" id="n_autor">
+                </div>
 
-            <div>
-                <input type="reset" value="limpiar">
-                <input type="submit" value="guardar ">
-            </div>
-             
+                <div>
+                    <label for="fecha">Fecha de publicación</label>
+                    <input type="text" name="fecha" id="fecha">
+                </div>
+
+                <div>
+                    <label for="n_fecha">Fecha de publicación</label>
+                    <input type="text" name="fecha" id="n_fecha">
+                </div>
+
+
+
+                <div>
+                    <label for="fuente">Fuente</label>
+                    <input type="text" name="nuevo_fuente" id="n_fuente">
+
+                </div>
+
+                <div>
+                    <label for="fuente">Nueva fuente</label>
+                    <input type="text" name="n_fuente" id="n_fuente">
+
+                </div>
+
+
+                <div>
+                    <label for="imagen"> Nueva imagen </label>
+                    <input type="file" name="foto_admin" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4">
+
+                </div>
+
+
+                <div>
+                    <label for="pdf">Subir pdf</label>
+                    <input type="file" name="pdf">
+                </div>
+
+
+                <div>
+                    <input type="reset" class="btn btn--solicitud" value="limpiar">
+                    <input type="submit" class="btn btn--solicitud" value="guardar ">
+                </div>
+            </fieldset>
 
         </form>
 
 
 
 
-        
+
     </main>
-    <footer >
+    <footer>
         <p><a href="/index.html">Cerrar Sesión</a></p>
         <!--Copyright-->
         <p>Copyright © 2022</p>
     </footer>
 </body>
+
 </html>
