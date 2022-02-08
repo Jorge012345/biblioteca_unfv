@@ -20,8 +20,8 @@
     <main>
         <h2>Eliminar</h2>
         <form name="form-agrega" action="mailto:jor_99_m@hotmail.com" method="post">
-             
-            <p>
+            <fieldset class="contenido-solicitud">
+            <div>
                 <label for="tipo">tipo</label>
                 <select name="tipo" id="tipo">
                     <option value="articulos">Articulos</option>
@@ -30,10 +30,10 @@
                     <option value="tesis">Tesis</option>
                    
                 </select>
-            </p>
+            </div>
 
          
-            <p>
+            <div>
                 <label for="especialidad">Elige especialidad</label> 
                  <select id="especialidad" name="especialidad" >
                    
@@ -67,43 +67,43 @@
                     </optgroup>
 
                 </select>
-            </p>
+            </div>
             
-            <p>
+            <div>
                <label for="cod">  Codigo  </label>
                <input type="text" id="cod">
-            </p>
+            </div>
 
-            <p>
+            <div>
                 <label for="titulo">Titulo</label> 
                 <input type="text" name="titulo" id="titulo">
 
-            </p>
+            </div>
 
-            <p>
+            <div>
                 <label for="fecha">Fecha de publicación</label>
                 <input type="text" name="fecha" id="fecha">
-            </p>
+            </div>
             
 
-            <p>
+            <div>
                  <label for="autor">Autor</label>
                  <input type="text" name="autor" id="autor">
-            </p>
+            </div>
           
-            <p>
+            <div>
                  <label for="fuente">Fuente</label>
                  <input type="text" name="fuente"  id="fuente" >
 
-            </p>
+            </div>
 
 
-            <p>
-                <input type="reset" value="Linpiar">
-                <input type="submit" value="Eliminar ">
-            </p>
+            <div>
+                <input type="reset" class="btn btn--solicitud" value="Linpiar">
+                <input type="submit" class="btn btn--solicitud" value="Eliminar ">
+            </div>
           
-
+        </fieldset>
         </form>
 
 
@@ -113,7 +113,6 @@
         
     </main>
     <footer >
-        <hr  />
         <p><a href="/index.html">Cerrar Sesión</a></p>
         <!--Copyright-->
         <p>Copyright © 2022</p>
