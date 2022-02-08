@@ -182,13 +182,18 @@ textarea {
     margin-bottom: 6px;
     border: 2px solid rgb(128, 236, 173);
     background-color: rgb(128, 236, 173);
+    
 
+}
+.btn--registrarse:hover{
+    color:rgb(63, 81, 85);
 }
 .inputLogin{
     
-    font-size: 20px; 
+    font-size: 17px; 
     margin-bottom: 10px;
-    padding: 8px 0px 8px 8px;
+    padding: 12px 16px;
+    border: 1px solid rgba(146, 146, 146, 0.363);
 }
 
 /*-------------RECLAMOS-------------------*/
