@@ -47,6 +47,7 @@ input,textarea,select{
     background: none;
     padding: 8px 0px 8px 8px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 
@@ -113,6 +114,7 @@ textarea {
 
 /*-------------LOGIN---------------------*/
 .login{
+    background-color:rgba(255, 255, 255, 0.753);
     padding: 20px; 
     width: 400px; 
     margin:50px auto 0px auto;
@@ -151,6 +153,8 @@ textarea {
     margin-top: 30px;
     width: 60%;
     margin-bottom: 6px;
+    border: 2px solid rgb(128, 236, 173);
+    background-color: rgb(128, 236, 173);
 
 }
 .inputLogin{
@@ -170,6 +174,9 @@ textarea {
 .parrafosReclamo label{
     display: block;
     margin-bottom: 10px;
+}
+.check{
+    width: 40px;
 }
 /*-------------SOLICITUD---------------------*/
 .contenido-solicitud{
