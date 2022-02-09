@@ -26,7 +26,10 @@ h2{
     text-align: center;
     color: rgb(75, 113, 129);
 }
-
+header{
+    padding-top: 1.5em; 
+    text-align: center;
+}
 input,textarea,select{
     font    : .9em/1.5em "handwriting", sans-serif;
     border  : 1px solid rgb(91, 124, 123);
@@ -94,7 +97,7 @@ textarea {
 /*---------------------HEADER------------------------------*/
 .header{
     text-align:center; 
-    background-color: rgb(52, 233, 148); 
+    background-color: rgb(124, 203, 235); 
     padding-top: 1.5em; 
     padding-bottom: 3em;
 }
@@ -102,7 +105,7 @@ textarea {
 nav{
     text-align: center; 
     width: 100%; 
-    background:linear-gradient(rgb(52, 233, 148),rgb(58, 245, 198)); 
+    background:linear-gradient(rgb(124, 203, 235),rgb(65, 232, 238)); 
     padding-top: 15px; 
     padding-bottom: 15px; 
     font-size: 20px; 
@@ -143,13 +146,13 @@ nav a:hover::before{
 .espacio-busqueda{
     padding-top: 60px;
     padding-bottom: 60px;
-    background:linear-gradient(rgb(58, 245, 198),rgb(115, 209, 193));
+    background:linear-gradient(rgb(65, 232, 238),rgb(115, 209, 193));
 }
 .busqueda{
-    width: 60%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(192, 231, 220);
+    background-color: inherit;
     border-radius: 25px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
@@ -202,6 +205,16 @@ nav a:hover::before{
     padding:40px ;
 }
 
+.tarjeta{
+    border-radius: 20px ;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
+}
+.tarjeta img{
+    border-radius:20px 20px 0px 0px;
+}
+figure .trasera{
+    padding: 20px;
+}
 
 
 
