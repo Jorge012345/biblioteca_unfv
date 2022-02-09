@@ -4,7 +4,10 @@
     padding: 0px; 
     box-sizing: border-box;
 }
-
+:root {
+    --yellow-color: #f7df1e;
+    --dark-color: #222;
+}
 /*----------general------------------*/
 body{
     
@@ -35,7 +38,11 @@ input,textarea,select{
     width: 100%;
     margin-bottom: 10px;
 }
-
+textarea:focus, input:focus, input[type]:focus {
+    border-color: rgba(101, 187, 236, 0.644);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 6px rgba(101, 187, 236, 0.644);
+    outline: 0 none;
+}
 
 table{
     margin-top: 40px;
@@ -257,6 +264,7 @@ nav a:hover::before{
 }
 .contenido-solicitud div {
     margin: 20px;
+    text-align: left;
 }
 .btn--solicitud{
     font-size: inherit;
