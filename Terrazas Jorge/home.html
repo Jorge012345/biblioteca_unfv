@@ -13,101 +13,109 @@
 
 <body>
   <header class="header">
-    
+
     <h1>BIBLIOTECA VIRTUAL</h1>
 
   </header>
   <nav>
-    <a  href="/home.html">Inicio</a>
-    <a  href="/acerca_de.html">Acerca de</a>
-    <a  href="/horario_atencion.html">Horario de atención</a>
-    <a  href="/consulta.html">Consulta</a>
+    <a href="/home.html">Inicio</a>
+    <a href="/acerca_de.html">Acerca de</a>
+    <a href="/horario_atencion.html">Horario de atención</a>
+    <a href="/consulta.html">Consulta</a>
 
   </nav>
-  <main>
+  <main class="main-home">
+    <section class="espacio-busqueda">
     <div class="busqueda">
       <form>
-        <input class="buscar"  type="text" placeholder="Ingrese el término de búsqueda" name="txtBuscar" required>
+        <input class="buscar" type="text" placeholder="Ingrese el término de búsqueda" name="txtBuscar" required>
         <input class="btn--busqueda" type="submit" name="btnBuscar" value=""></input>
         <i class="fa-solid fa-magnifying-glass lupa"></i>
       </form>
     </div>
-    
-    
-    <section>
-      
-      <table>
+  </section>
+
+    <section class="panel-home">
+
+      <table >
         <tr>
           <td>
-            <figure>
-              <a href="/carreras/carreras.html">
-                <img src="/assets/img/carreras/carreras.webp" width="400" height="290px"
-                  alt="Carreras" />
-              </a>
-              <figcaption ><h2>Carreras</h2></figcaption>
 
-            </figure>
+            <div class="tarjeta">
+              <a href="/carreras/carreras.html">
+                <figure>
+
+                  <img class="frontal" src="/assets/img/carreras/carreras.webp" width="400" height="290px"
+                    alt="Carreras" />
+
+                  <figcaption class="trasera">
+                    <h2>Carreras</h2>
+                  </figcaption>
+
+                </figure>
+              </a>
+            </div>
+
           </td>
-          
-        </tr>
-        <tr>
           <td>
             <figure>
               <a href="/libros_generales/libros_generales.html">
                 <img src="/assets/img/libros_generales/libros_generales.webp" width="400" height="290px"
                   alt="Libros generales" />
               </a>
-              <figcaption ><h2>Libros generales</h2></figcaption>
+              <figcaption>
+                <h2>Libros generales</h2>
+              </figcaption>
 
             </figure>
           </td>
-          
+
         </tr>
+
         <tr>
           <td>
             <figure>
               <a href="/solicitud_libros/solicitud.html">
-                <img src="/assets/img/solicitud_libros/solicitud.webp" width="400" height="290px"
-                  alt="Articulos" />
+                <img src="/assets/img/solicitud_libros/solicitud.webp" width="400" height="290px" alt="Articulos" />
               </a>
-              <figcaption ><h2>Solicitud de libros</h2></figcaption>
+              <figcaption>
+                <h2>Solicitud de libros</h2>
+              </figcaption>
 
             </figure>
           </td>
-          
-        </tr>
-        <tr>
           <td>
             <figure>
               <a href="/reclamos/reclamos.html">
-                <img src="/assets/img/reclamos/reclamos.webp" width="400" height="290px"
-                  alt="Revistas" />
+                <img src="/assets/img/reclamos/reclamos.webp" width="400" height="290px" alt="Revistas" />
               </a>
-              <figcaption ><h2>Reclamos</h2></figcaption>
+              <figcaption>
+                <h2>Reclamos</h2>
+              </figcaption>
 
             </figure>
           </td>
-          
         </tr>
-        
-       
+
+
+
       </table>
     </section>
 
 
-    
-
-    
 
 
-  
+
+
+
+
 
   </main>
 
-  
 
-  
-  <footer >
+
+
+  <footer>
     <p><a href="/index.html">Cerrar Sesión</a></p>
     <!--Copyright-->
     <p>Copyright © 2022</p>
