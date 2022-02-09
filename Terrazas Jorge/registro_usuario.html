@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body>
+<body class="pag-login">
     <header class="header">
         <h1>Registrarse</h1>
     </header>
@@ -18,33 +18,38 @@
         <form name="form-registro" action="mailto:jor_99_m@hotmail.com" method="post">
             <fieldset class="contenido-solicitud">
                 
-                <div>Los campos obligatorios se marcan con un <abbr title="required">*</abbr>.</div>
+                
                 <div>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" required autofocus>
-                    <abbr title="required">*</abbr>
+                    
                 </div>
                 <div>
                     <label for="apellido">Apellido:</label>
                     <input type="text" id="apellido" required>
-                    <abbr title="required">*</abbr>
+                   
                 </div>
-
+                <div>
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="text" id="contraseña" required>
+                 
+                </div>
                 <div>
                     <label for="codigo">Codigo:</label>
                     <input type="text" id="codigo" required>
-                    <abbr title="required">*</abbr>
+                 
                 </div>
+                
                 <div>
                     <label for="dni">DNI:</label>
                     <input type="text" id="dni" required>
-                    <abbr title="required">*</abbr>
+                    
                 </div>
 
                 <div>
                     <label for="correo">Correo:</label>
                     <input type="email" id="correo" required>
-                    <abbr title="required">*</abbr>
+                   
                 </div>
 
                 <div>
@@ -57,12 +62,12 @@
                     <label for="correo">Sexo:</label>
 
                     <div>
-                        <label>Masculino</label><input type="radio" name="g" value="" required>
+                        <label>Masculino</label><input class="check" type="radio" name="g" value="" required>
                     </div>
                     <div>
-                        <label>Femenino</label><input type="radio" name="g" value="" required>
+                        <label>Femenino</label><input class="check" type="radio" name="g" value="" required>
                     </div>
-                    <abbr title="required">*</abbr>
+                   
                 </div>
 
 
