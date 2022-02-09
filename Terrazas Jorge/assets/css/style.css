@@ -61,8 +61,8 @@ th{
     padding: 10px;
     border: 2px solid rgb(143, 185, 174);
  
-    color: rgb(24, 172, 24);/*agregado*/
- 
+    color: rgb(4, 138, 4);/*agregado*/
+
     border-radius: 20px;
  
 }
@@ -299,5 +299,4 @@ footer{
     width: 100%;
     position: absolute;
     bottom: 0;
-
 }
