@@ -60,7 +60,11 @@ td{
 th{
     padding: 10px;
     border: 2px solid rgb(143, 185, 174);
+ 
+    color: rgb(24, 172, 24);/*agregado*/
+ 
     border-radius: 20px;
+ 
 }
 
 
@@ -69,6 +73,7 @@ a{
     color: inherit;
     
 }
+
 a:hover{
     color: rgb(60, 165, 147);
 }
