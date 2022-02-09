@@ -290,6 +290,14 @@ nav a:hover::before{
     margin-top: 40px;
     border-radius: 15px ;
 }
+
+/*-------------------ADMIN-----------------------*/
+
+.btn_tabla{
+    width: 140px;
+}
+
+
 /*-------------FOOTER---------------------*/
 footer{
     text-align: center;
