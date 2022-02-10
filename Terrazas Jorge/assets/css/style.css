@@ -1,42 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
-/*importamos la letra Roboto de google fonts*/
-*{  /*selector universal hara cambios a todos las etiquetas*/
+ *{   
     margin:0px; 
-    /*margen 0  (el margen es la distancia entre las cajas)*/
+    
     padding: 0px; 
-    /*padding 0 (distancia entre la caja y el texto)*/
+   
     box-sizing: border-box;
-    /*hace que la caja no se modifique y mantenga su forma */
+   
 }
 
 /*----------general------------------*/
  
 body{ 
-     /*selector de etiqueta*/
-    
+     
     background-color: rgb(245, 245, 245);
-    /*Color del body sera blanco aplicando colores RGB*/
+   
     font-family: "Roboto", sans-serif;
-    /*El tipo de letra sera roboto*/
+   
     
     color: rgb(56, 78, 75);
-    /*El color de la letra sera un rgb*/
+   
     
     position: relative;
-    /*Position relative que sirve para mover la caja en distintas direcciones*/
+     
     
     padding-bottom: 3em;
-    /*Pendra un padding de la parte de abajo de 3em */
+     
 
     min-height: 100vh;
-    /*El min-height que nos sirve para definir la altura minima de un elemento */
+     
 }
 main{
     text-align: center;
-    /*El texto estara alineado en el centro */
+     
     margin-bottom: 160px;
 
-    /*Tendra un margen de las partes inferiores de 160px */
+     
 
     padding-top: 60px;
 
@@ -44,9 +42,9 @@ main{
 }
 h2{
     text-align: center; 
-    /*Alineado del texto en el centro*/
+    
     color: rgb(75, 113, 129);
-    /*color de letra rgb*/
+   
 }
  
  
@@ -56,25 +54,20 @@ header{
 }
 input,textarea,select{
 
-  /*selector multiple*/
+ 
     font    : .9em/1.5em "handwriting", sans-serif;
      
     border  : 1px solid rgb(91, 124, 123);
-    /*tendra un borde solido de 1px de color RGB*/ 
+    
     border-radius: 5px;
-    /*le da a los bordes un aspecto redondeado*/
+     
     background: none; 
     padding: 8px 0px 8px 8px;
-    /*(distancia entre la caja y el texto) de: 
-       .8px en la parte superior 
-       .0px en la parte derecha 
-       .8px en la parte inferior
-       .8px en la parte izquierda
-    */
+    
     width: 100%; 
-    /*el ancho de las etiquetas seran del 100%*/
+   
     margin-bottom: 10px;
-    /*los margenes de separacion seran de 10px en la parte inferior*/
+     
 }
 
 
@@ -84,72 +77,70 @@ textarea:focus, input:focus, input[type]:focus {
     outline: 0 none;
 }
 
-table{/*selector de etiqueta*/
+table{ 
     margin-top: 40px;
-    /*margen en la parte superior de 40px  */
+     
     margin-left: auto; 
-    /*margin-left auto que nos indica que es el calculo automatico que hara el navegador en el lado izquierdo*/
+     
 
     margin-right: auto;  
-    /*margin-right auto que nos indica que es el calculo automatico que hara el navegador en el lado derecho*/
+    
 
     font-weight: 700;
-    /*Es el grosor de la letra*/
+     
     background-color: rgb(183, 219, 209);
-    /*es el color del la tabla*/
+     
 
     border-collapse: separate;
-    /*El border- collapse se utiliza para la fusion de bordes , o el modo de presentacion de los bordes
-    en este caso usamos el separate que indica que habra una distancia entre los bordes*/
+    
 
     border-spacing: 20px;
-    /*Especifica la distancia entre los bordes de la celda*/
-
+     
     border-radius: 20px;
-    /*Indica que los bordes tendran forma redondeada*/
+    
 
     box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
-    /*Agrega sombras a las tablas*/
+     
 }
 td{
-    /*Selector td (columnas)*/
+     
 
     padding: 10px;
-    /*Las filas tendran un padding de 10px*/
+     
     border: 2px solid rgb(143, 185, 174);
-    /*Tendram un border*/
+   
     border-radius: 20px;
-    /*Bordes redondeados*/
+     
 }
 th{
-    /**Selector etiqueta */
+    
     padding: 10px;
-    /*Padding de px (distancia entre el texto y la caja)*/
+    
     border: 2px solid rgb(143, 185, 174);
-    /*Bordes solido de tamaño 2 px y color RGB */
+     
  
-    color: rgb(4, 138, 4);/*agregado*/
+    color: rgb(4, 138, 4); 
 
     border-radius: 20px;
-    /*Bordes redondeados*/
+    
  
 }
 
 
 a{
-    /**Selector etiqueta */
+     
     text-decoration: none;
-    /*Quita las lineas por defecto que tiene los enlaces*/
+     
     color: inherit;
-    /*Agrega color a los enlaces*/
+     
     
 }
 
 a:hover{
  
-    /*pseudoclase del enlace*/
+    
     color: rgba(59, 76, 226, 0.609);
-   /*cada vez que se pase por los enlaces  se pintara del color escojido*/
+   
  
 }
 
@@ -157,7 +148,7 @@ a:hover{
 
 img{
     border-radius: 20px;
-    /*agrega bordes redondeados a las imagenes*/
+     
 }
 
 legend {
@@ -166,36 +157,35 @@ legend {
 textarea {
     vertical-align: top;
 }
-/*---------------------HEADER------------------------------*/
+
 .header{
  
-  /*selector de clase header*/
+   
     text-align:center; 
-    /*centra el texto*/
+    
     background-color: rgb(124, 203, 235); 
-  /*agrega color de fondo*/
+   
     padding-top: 1.5em; 
-  /*Agrega un espacio entre la caja y el texto en la parte superior de 1.5em*/
+   
     padding-bottom: 3em;
-    /*Agrega un espacio entre la caja y el texto en la parte inferio de 3em*/
+     
 }
 /*--------------------NAVBAR------------------------*/
 nav{
     text-align: center; 
-     /*centra el texto*/
+   
     width: 100%; 
  
     background:linear-gradient(rgb(124, 203, 235),rgb(65, 232, 238)); 
-   /*Agrega color al fondo*/
+    
     padding-top: 15px; 
-    /* Agrega un espacio entre la caja y el texto en la parte superior de 15px*/
+     
     padding-bottom: 15px; 
-    /*Agrega un espacio entre las cajas en la parte inferior de 15px*/
- 
+     
     font-size: 20px; 
-    /*Tamaño de la letra sera de 20px*/
+    
     font-weight: 700;
-    /* grosor de las letras */
+     
     
     position: sticky;
     
@@ -205,10 +195,9 @@ nav{
 }
 nav a{
     margin-right: 40px;
-    /*Agrega un espacio entre las cajas en la parte derecha de 40px*/
-
+     
     position: relative;
-    /*sirve para mover la caja en distintas direcciones*/
+    
 }
 
 
@@ -247,75 +236,75 @@ nav a:hover::before{
 .busqueda{
  
      
-   /*selector de clase*/
+    
     width: 90%;
-  /*ancho de la caja sera de un 90% */
+   
  
     margin-left: auto;
-    /*Agrega un espacio entre las cajas en el lado izquierdo forma automatica por el navegador*/
+    
 
     margin-right: auto;
-   /*Agrega un espacio entre las cajas en la parte drecha de forma automatica*/
+    
  
  
     background-color: inherit;
-    /*toma el color del contenedor padre*/
+     
  
     border-radius: 25px;
-    /*Bordes redondeados*/
+    
     padding: 20px;
-    /* Agrega un espacio entre la caja y el texto en la parte superior de 20px*/
+     
  
     box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
-    /*Agrega sombras a las cajas*/
+     
     position: relative;
-    /*sirve para mover la caja en distintas direcciones*/
+     
 }
-.buscar{/*Selector de clase*/
+.buscar{ 
     font-size: 17px;
-    /*Tamaño de letra de 17 px*/
+     
     border-radius: 25px;
-    /*bordes redondeados*/
+     
     margin-right: 30px;
-    /*Agrega un espacio entre las cajas  de forma automatica por el navegador*/
+     
     width: 100%;
-    /*ancho de la caja sera de un 100% */    
+        
     padding-left: 20px;
-    /* Agrega un espacio entre la caja y el texto en la parte izquierda de 20px*/
+    
 
     padding-right: 20px;
-    /* Agrega un espacio entre la caja y el texto en la parte superior de 20px*/
+     
 
 }
 .btn--busqueda{
     width: 45px;
-    /*ancho de la caja sera de  px*/    
+    
     cursor:pointer;
-    /*genera un cursor de raton diferente*/
+     
     font-size: 20px;
-    /*el tamaño de la letra sera de 20px*/
+    
     background: transparent;
     
     position: absolute;
 
     border-radius: 50%;
-    /*dara bordes redondeados*/
+     
     border: 0;
-    /*no tendra bordes*/
+     
     z-index: 9;
     top:19px;
     right: 25px;
     vertical-align: top;
 }
-.lupa{/*selector de clase*/
+.lupa{ 
     font-size: 20px;
-    /*El tamaño de la letra sera de 20px*/
+    
     position: absolute;
-    /*Sirve para mover la caja*/
+    
     right: 38px;
-    /*Se movera 38px a la derecha*/
+     
     top:30px;
-    /*Se movera 30px hacia arriba*/
+    
 }
 .btn--busqueda:focus ,.btn--busqueda[type]:focus{
     border:none;
@@ -351,56 +340,56 @@ figure .trasera{
 
 
 /*-------------LOGIN---------------------*/
-.pag-login{/*Selector de clase*/
+.pag-login{ 
     background-color:rgba(214, 208, 208, 0.753);
-    /*Define color de fondo que sera RGBA*/
+     
 }
 
 .login{
     background-color:rgba(255, 255, 255, 0.753);
-    /*Define color de fondo que sera RGBA*/
+     
     padding: 20px; 
-    /*Agrega un espacio entre la caja y el texto en todas las direcciones de 20px*/
+     
 
     width: 400px; 
-    /*Agrega un ancho de 400px a la caja*/
+     
     margin:50px auto 0px auto;
 
     border-radius: 20px;
-    /*Da forma rendodeada a la caja*/
+     
     box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
-    /*agrega sombreado a la caja*/
+     
 }
 .header-login{
     margin-top: 20px;
 
     text-align: center; 
     font-size: 27px;
-    /*tamaño de la letra sera de 27px*/
+     
     color:rgb(41, 87, 65)
 }
 .description-login{
     font-size: 22px;
-    /*tamaño de letra de 22px*/
+     
     color:rgb(41, 87, 65);
-    /*Color de la letra sera RGB*/
+     
 }
 .btn{
     font-size: 20px;
-    /*El tamaño de la letra sera de 20px*/
+     
     font-weight: 600;
-    /*El grosor de la letra sera de 600*/
+     
     border-radius: 5px;
-    /*Da bordes redondeados*/
+     
     width: 100%;
-    /*El ancho de la caja sera del 100%*/
+     
     border: 2px solid rgb(128, 236, 173);
 
     background-color: rgb(128, 236, 173);
     color:rgb(63, 81, 85);
     cursor:pointer;
     padding: 5px;
-    /*Agrega un espacio entre la caja y el texto en todas las direcciones de 5px*/
+     
     margin-bottom: 20px;
  
     padding: 8px;
@@ -426,28 +415,28 @@ figure .trasera{
 }
 .btn--registrarse:hover{
     color:rgb(63, 81, 85);
-    /*Da color rgb al pasar sobre el boton*/
+     
 }
 .inputLogin{
     
     font-size: 17px; 
-    /*da un tamaño de letra de 17px*/
+     
     margin-bottom: 10px;
     padding: 12px 16px;
-    /*Agrega un espacio entre la caja y el texto en  los lados verticales de 12px y los extremos de 16px*/
+     
 
     border: 1px solid rgba(146, 146, 146, 0.363);
-    /*agrega un borde solido de 1px con colores RGBA */
+    
 }
 
 /*-------------RECLAMOS-------------------*/
 .parrafosReclamo{
     width: 700px;
-    /*Da un tamaño a la caja de 700px*/
+     
     margin-left: auto;
     margin-right: auto; 
     text-align: justify;
-    /*Hace que el texto ocupe todo el espacio */
+     
 }
 .parrafosReclamo label{
     display: block;
@@ -460,83 +449,83 @@ figure .trasera{
 .contenido-solicitud{
     margin: 20px auto 80px auto;
     border-radius: 20px;
-    /*Da bordes redondeados*/
+     
     width: 400px;
-    /*Da un tamaño de 400px a la caja*/
+    
     text-align: justify;
     padding: 20px;
-    /*Agrega un espacio entre la caja y el texto en todos los lados de 20px*/
+     
 
     border: none;
     background-color: rgb(179, 216, 208);
-    /*da un color de fondo de color RGB*/
+    
     box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
-    /*Pone sombras a las cajas*/
+     
 }
 .contenido-solicitud div {
     margin: 20px;
-    /*Agrega un espacio entre las cajas de 20px*/
+     
     text-align: left;
-    /*Alinea el texto a la derecha*/
+     
 }
 .btn--solicitud{
     font-size: inherit;
     color:rgb(50, 59, 56);
-    /*Agrega color al texto*/
+     
     border: 2px solid rgb(140, 175, 143);
      
     background-color: rgb(140, 175, 143);
-    /*Agrega un color de fondo RGB*/
+      
 }
 /*-------------ACERDA DE------------------*/
 .parrafos{
     margin-left: 180px;
-    /*Agrega un margen a la izquierda de 180px*/
+    
     margin-right: 180px; 
-    /*Agrega un margen a la derecha de 180px*/
+    
     margin-top: 50px; 
-    /*Agrega un margen en la parte superior de 50px*/
+    
     margin-bottom: 50px;
-    /*Agrega un margen en la parte inferior 50px*/
+     
 
     text-align: justify;
     border-radius: 25px;
-    /*Agrega bordes redondeado*/
+     
     padding: 40px;
     background-color: rgb(164, 190, 194);
-    /*Agrega un color de fondo*/
+     
     box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
 }
 .videos iframe{
     margin-top: 40px;
     border-radius: 15px ;
-    /*Agrega bordes redondeado*/
+     
 
 }
 
 /*-------------------ADMIN-----------------------*/
 
 .btn_tabla{ 
-    /*selector de clase del boton de las tablas*/
+     
     width: 140px;
-     /*ancho del boton de las tablas seran de 140px*/
+      
     height: 45px;
-    /*altura del boton de las tablas seran de 45px*/
+     
 }
 
 
 /*-------------FOOTER---------------------*/
 footer{
     text-align: center;
-    /*alinea el texto del footer*/
+    
     background-color: #2d3c3b;
-     /*agrega color al fondo */
+      
     color:rgb(136, 131, 131);
-    /*da color a la letra */
+    
     padding: 0.9em 0px;
-    /*da un padding (espacio entre la caja y el texto) hacia arriba y abajo de 0.9 em y de 0 a los costado*/
+     
     width: 100%;
-    /*el ancho del footer sera del 100% */
+     
     position: absolute; 
     bottom:  0;
 }
