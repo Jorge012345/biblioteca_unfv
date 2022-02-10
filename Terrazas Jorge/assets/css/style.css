@@ -35,7 +35,11 @@ main{
     text-align: center;
     /*El texto estara alineado en el centro */
     margin-bottom: 160px;
+
     /*Tendra un margen de las partes inferiores de 160px */
+
+    padding-top: 60px;
+
     
 }
 h2{
@@ -44,9 +48,15 @@ h2{
     color: rgb(75, 113, 129);
     /*color de letra rgb*/
 }
+ 
+ 
+header{
+    padding-top: 1.5em; 
+    text-align: center;
+}
+input,textarea,select{
 
-input,textarea,select{ 
-    /*selector multiple*/
+  /*selector multiple*/
     font    : .9em/1.5em "handwriting", sans-serif;
      
     border  : 1px solid rgb(91, 124, 123);
@@ -136,9 +146,11 @@ a{
 }
 
 a:hover{
+ 
     /*pseudoclase del enlace*/
-    color: rgb(60, 165, 147);
-    /*cada vez que se pase por los enlaces  se pintara del color escojido*/
+    color: rgba(59, 76, 226, 0.609);
+   /*cada vez que se pase por los enlaces  se pintara del color escojido*/
+ 
 }
 
 
@@ -156,13 +168,14 @@ textarea {
 }
 /*---------------------HEADER------------------------------*/
 .header{
-    /*selector de clase header*/
-    text-align:center;
-     /*centra el texto*/
-    background-color: rgba(164, 182, 182, 0.76); 
-    /*agrega color de fondo*/
-    padding-top: 1.5em;
-     /*Agrega un espacio entre la caja y el texto en la parte superior de 1.5em*/
+ 
+  /*selector de clase header*/
+    text-align:center; 
+    /*centra el texto*/
+    background-color: rgb(124, 203, 235); 
+  /*agrega color de fondo*/
+    padding-top: 1.5em; 
+  /*Agrega un espacio entre la caja y el texto en la parte superior de 1.5em*/
     padding-bottom: 3em;
     /*Agrega un espacio entre la caja y el texto en la parte inferio de 3em*/
 }
@@ -171,16 +184,14 @@ nav{
     text-align: center; 
      /*centra el texto*/
     width: 100%; 
-    /*Ocupara un ancho el 100% osea toda la pantalla horizontalmente*/
-    background-color: rgb(164, 182, 182); 
-    /*Agrega color al fondo*/
+ 
+    background:linear-gradient(rgb(124, 203, 235),rgb(65, 232, 238)); 
+   /*Agrega color al fondo*/
     padding-top: 15px; 
     /* Agrega un espacio entre la caja y el texto en la parte superior de 15px*/
-    padding-bottom: 15px; 
-    /*Agrega un espacio entre la caja y el texto en la parte inferio de 15px*/
-
     margin-bottom: 60px; 
     /*Agrega un espacio entre las cajas en la parte inferior de 60px*/
+ 
     font-size: 20px; 
     /*Tamaño de la letra sera de 20px*/
     font-weight: 700;
@@ -207,7 +218,7 @@ nav a::before{
     width:100%;
     height: 4px;
     border-radius: 4px;
-    background-color: rgb(60, 165, 147);
+    background-color: rgba(59, 76, 226, 0.609);
 
     bottom: 0;
     left:0;
@@ -225,18 +236,31 @@ nav a:hover::before{
 
 
 /*-------------------HOME------------------*/
+.main-home{
+    padding-top: 0px;
+}
+.espacio-busqueda{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background:linear-gradient(rgb(65, 232, 238),rgb(115, 209, 193));
+}
 .busqueda{
-    /*selector de clase*/
-    width: 60%;
-    /*ancho de la caja sera de un 60% */
+ 
+     
+   /*selector de clase*/
+    width: 90%;
+  /*ancho de la caja sera de un 90% */
+ 
     margin-left: auto;
     /*Agrega un espacio entre las cajas en el lado izquierdo forma automatica por el navegador*/
 
     margin-right: auto;
-    /*Agrega un espacio entre las cajas en la parte drecha de forma automatica*/
-
-    background-color: rgb(192, 231, 220);
-    /*Color de fondo sera RGB*/
+   /*Agrega un espacio entre las cajas en la parte drecha de forma automatica*/
+ 
+ 
+    background-color: inherit;
+    /*toma el color del contenedor padre*/
+ 
     border-radius: 25px;
     /*Bordes redondeados*/
     padding: 20px;
@@ -293,6 +317,39 @@ nav a:hover::before{
     top:30px;
     /*Se movera 30px hacia arriba*/
 }
+.btn--busqueda:focus ,.btn--busqueda[type]:focus{
+    border:none;
+    box-shadow: none;
+    outline: 0 none;
+}
+.panel-home{
+    background:linear-gradient(rgb(115, 209, 193),rgb(255, 255, 255));
+    box-shadow: 0px 40px 40px white;
+}
+.panel-home table{
+    margin-top: 0px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.panel-home td{
+    border: none;
+    padding:40px ;
+}
+
+.tarjeta{
+    border-radius: 20px ;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 0.3);
+}
+.tarjeta img{
+    border-radius:20px 20px 0px 0px;
+}
+figure .trasera{
+    padding: 20px;
+}
+
+
+
 /*-------------LOGIN---------------------*/
 .pag-login{/*Selector de clase*/
     background-color:rgba(214, 208, 208, 0.753);
