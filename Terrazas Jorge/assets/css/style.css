@@ -189,8 +189,8 @@ nav{
    /*Agrega color al fondo*/
     padding-top: 15px; 
     /* Agrega un espacio entre la caja y el texto en la parte superior de 15px*/
-    margin-bottom: 60px; 
-    /*Agrega un espacio entre las cajas en la parte inferior de 60px*/
+    padding-bottom: 15px; 
+    /*Agrega un espacio entre las cajas en la parte inferior de 15px*/
  
     font-size: 20px; 
     /*Tamaño de la letra sera de 20px*/
