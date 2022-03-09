@@ -15,40 +15,40 @@
         <h1>Registrarse</h1>
     </header>
     <main>
-        <form name="form-registro" action="mailto:jor_99_m@hotmail.com" method="post">
+        <form id="form-registro" action="mailto:jor_99_m@hotmail.com" method="post">
             <fieldset class="contenido-solicitud">
                 
                 
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" required autofocus>
+                    <input type="text" id="nombre" name="txtNombre" required autofocus>
                     
                 </div>
                 <div>
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" required>
+                    <input type="text" id="apellido" name="txtApellido" required>
                    
                 </div>
                 <div>
                     <label for="contraseña">Contraseña:</label>
-                    <input type="text" id="contraseña" required>
+                    <input type="text" id="contraseña" name="txtPassword" required>
                  
                 </div>
                 <div>
                     <label for="codigo">Codigo:</label>
-                    <input type="text" id="codigo" required>
+                    <input type="text" id="codigo" name="txtCodigo" required>
                  
                 </div>
                 
                 <div>
                     <label for="dni">DNI:</label>
-                    <input type="text" id="dni" required>
+                    <input type="text" id="dni" name="txtDni" required>
                     
                 </div>
 
                 <div>
                     <label for="correo">Correo:</label>
-                    <input type="email" id="correo" required>
+                    <input type="email" id="correo" name="txtCorreo" required>
                    
                 </div>
 
@@ -59,20 +59,19 @@
                     <label for="correo">Sexo:</label>
 
                     <div>
-                        <label>Masculino</label><input class="check" type="radio" name="g" value="" required>
+                        <label>Masculino</label><input class="check" type="radio" name="genero" value="Masculino" required>
                     </div>
                     <div>
-                        <label>Femenino</label><input class="check" type="radio" name="g" value="" required>
+                        <label>Femenino</label><input class="check" type="radio" name="genero" value="Femenino" required>
                     </div>
                    
                 </div>
 
 
                 <div>
-                    <input type="submit" class="btn btn--solicitud" value="Enviar">
-                
                     <input type="reset" class="btn btn--solicitud" value="Limpiar campos">
-
+                    <input type="submit" class="btn btn--solicitud" value="Enviar">
+            
                 </div>
 
 
@@ -86,6 +85,7 @@
         <!--Copyright-->
         <p>Copyright © 2022</p>
     </footer>
+    <script src="assets/js/registro_usuario.js" ></script>
 </body>
 
 </html>
