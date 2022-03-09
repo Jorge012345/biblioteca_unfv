@@ -17,7 +17,7 @@
 
         <p class="description-login">Universidad Nacional Federico Villarreal.</p>
         <div class="login">
-            <form name="form-login" method="POST">
+            <form id="form-login" method="POST">
 
                 <div>
                     <input class="inputLogin" type="email" placeholder="Correo electrónico" name="txtEmail" required>
@@ -27,7 +27,7 @@
                     <input class="inputLogin" type="password" placeholder="Contraseña" name="txtPassword" required>
                 </div>
                 <div>
-                    <input class="inputLogin" list="tipos" placeholder="Tipo">
+                    <input class="inputLogin" list="tipos" placeholder="Tipo" name="txtTipo">
 
                     <datalist id="tipos">
                         <option value="Docente">Docente</option>
@@ -64,7 +64,7 @@
         <!--Copyright-->
         <p>Copyright © 2022</p>
     </footer>
-
+    <script src="assets/js/index.js" ></script>
 </body>
 
 </html>
