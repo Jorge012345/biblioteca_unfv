@@ -5,6 +5,8 @@
     $titulo=$_POST['txtTitulo'];
     $autor=$_POST['txtAutor'];
     $fuente=$_POST['txtFuente'];
+    
+
 
     echo "<h1>Registro eliminado</h1>";
     echo "<p>tipo:  ",$tipo,"</p>";
