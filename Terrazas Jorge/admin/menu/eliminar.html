@@ -23,11 +23,11 @@
 
     <main>
         <h2>Eliminar</h2>
-        <form id="form-eliminar"  method="post">
+        <form id="form-eliminar"  method="post" enctype="multipart/form-data">
             <fieldset class="contenido-solicitud">
             <div>
                 <label for="tipo">tipo</label>
-                <select name="tipo" id="tipo">
+                <select name="tipo" id="txtTipo">
                     <option value="articulos">Articulos</option>
                     <option value="libros">Libros</option>
                     <option value="revistas">Revistas</option>
@@ -39,7 +39,7 @@
          
             <div>
                 <label for="especialidad">Elige especialidad</label> 
-                 <select id="especialidad" name="especialidad" >
+                 <select id="especialidad" name="txtEspecialidad" >
                    
                     <optgroup label="ing_agroindustrial">
                         
@@ -75,12 +75,12 @@
             
             <div>
                <label for="cod">  Codigo  </label>
-               <input type="text" id="cod">
+               <input type="text" id="cod" name="txtCodigo">
             </div>
 
             <div>
                 <label for="titulo">Titulo</label> 
-                <input type="text" name="titulo" id="titulo">
+                <input type="text" name="titulo" id="txtTitulo">
 
             </div>
 
