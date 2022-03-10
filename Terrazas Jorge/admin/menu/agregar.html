@@ -24,13 +24,13 @@
     <main>
         <h2>Agregar</h2>
 
-        <form id="form-agregar"  method="post">
+        <form id="form-agregar"  method="post" enctype="multipart/form-data">
 
             <fieldset class="contenido-solicitud">
 
                 <div>
                     <label for="tipo">Tipo </label>
-                    <select name="tipo" id="tipo">
+                    <select name="txtTipo" id="tipo">
                         <option value="articulos">Articulos</option>
                         <option value="libros">Libros</option>
                         <option value="revistas">Revistas</option>
@@ -43,7 +43,7 @@
                 <div>
                     <label for="especialidad">Elige especialidad</label>
 
-                    <select id="especialidad" name="especialidad">
+                    <select id="especialidad" name="txtEspecialidad">
 
                         <optgroup label="ing_agroindustrial">
 
@@ -81,29 +81,29 @@
 
                 <div>
                     <label for="codigo">Codigo</label>
-                    <input type="text" name="codigo" id="codigo">
+                    <input type="text" name="txtCodigo" id="codigo">
                 </div>
 
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text" name="titulo" id="titulo">
+                    <input type="text" name="txtTitulo" id="titulo">
 
                 </div>
 
 
                 <div>
                     <label for="autor">Autor</label>
-                    <input type="text" name="autor" id="autor">
+                    <input type="text" name="txtAutor" id="autor">
                 </div>
 
                 <div>
                     <label for="fecha">Fecha de publicación</label>
-                    <input type="text" name="fecha" id="fecha">
+                    <input type="text" name="txtFecha" id="fecha">
                 </div>
 
                 <div>
                     <label for="fuente">Fuente</label>
-                    <input type="text" name="fuente" id="fuente">
+                    <input type="text" name="txtFuente" id="fuente">
 
                 </div>
 
@@ -136,6 +136,9 @@
         <!--Copyright-->
         <p>Copyright © 2022</p>
     </footer>
+
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/agregar.js" ></script>
+
 
 </body>
 

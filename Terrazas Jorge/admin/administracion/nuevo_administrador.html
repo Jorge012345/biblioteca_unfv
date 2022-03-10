@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
 </head>
 
 <body>
@@ -28,44 +28,44 @@
     <main>
         <h2>Agregar administrador </h2>
 
-        <form id="form-registro-admin"  method="post">
+        <form id="form-registro-admin"  method="post" enctype="multipart/form-data">
             <fieldset class="contenido-solicitud">
                 
                 
                  
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" required autofocus>
+                    <input type="text" id="nombre" name="txtNombre" required autofocus >
                     
                 </div>
                 <div>
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" required>
+                    <input type="text" id="apellido"  name="txtApellido" required>
                     
                 </div>
 
                 <div>
                     <label for="codigo">Codigo:</label>
-                    <input type="text" id="codigo" required>
+                    <input type="text" id="codigo"  name="txtCodigo" required >
                     
                 </div>
 
 
                 <div>
                     <label for="usuario">Usuario:</label>
-                    <input type="text" id="usuario" required>
+                    <input type="text" id="usuario"  name="txtUser" required >
                     
                 </div>
 
                 <div>
                     <label for="correo">Correo:</label>
-                    <input type="email" id="correo" required>
+                    <input type="email" id="correo" name="txtCorreo" required >
                     
                 </div>
 
                 <div>
                     <label for="contra">Contraseña:</label>
-                    <input type="password" id="contra" required>
+                    <input type="password" id="contra"  name="txtPassword" required >
                     
                 </div>
  
@@ -89,6 +89,9 @@
         <!--Copyright-->
         <p>Copyright © 2022</p>
     </footer>
+
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/nuevo_administrador.js" ></script>
+
 </body>
 
 </html>
