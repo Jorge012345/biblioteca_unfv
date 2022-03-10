@@ -49,31 +49,39 @@
 
                 <div class="parrafosReclamo">
                     <label>1.Identifica el motivo del reclamo: </label>
-                    <label><input class="check" type="checkbox" value="1">Trato profesional en la atencion:la persona que te
+                    <label><input class="check" name="miCheck" type="checkbox" value="Trato profesional en la atencion:la persona que te
+                        atendí no lo hizo de forma adecuada">Trato profesional en la atencion:la persona que te
                         atendi&oacute; no lo hizo de forma adecuada </label>
-                    <label><input class="check" type="checkbox" value="2">Tiempo:hubo demora antes y/o durante la atención que
+                    <label><input class="check" name="miCheck" type="checkbox" value="Tiempo:hubo demora antes y/o durante la atención que
+                        recibiste">Tiempo:hubo demora antes y/o durante la atención que
                         recibiste </label>
-                    <label><input class="check" type="checkbox" value="3">Procedimiento: no se siguió el procedimiento de atención o
+                    <label><input class="check" name="miCheck" type="checkbox" value="Procedimiento: no se siguió el procedimiento de atención o
+                        no estás de acuerdo con este.">Procedimiento: no se siguió el procedimiento de atención o
                         no estás de acuerdo con este. </label>
-                    <label><input class="check" type="checkbox" value="4">Información: la orientación sobre el servicio fue
+                    <label><input class="check" name="miCheck" type="checkbox" value="Información: la orientación sobre el servicio fue
+                        inadecuada, insuficiente o imprecisa">Información: la orientación sobre el servicio fue
                         inadecuada, insuficiente o imprecisa
-                        <label><input class="check" type="checkbox" value="5">Resultado:no se pudo obtener un resultado concreto como
+                        <label><input class="check" name="miCheck" type="checkbox" value="Resultado:no se pudo obtener un resultado concreto como
+                            parte del servicio y/o no se justifica la negativa en la atención del servicio.">Resultado:no se pudo obtener un resultado concreto como
                             parte del servicio y/o no se justifica la negativa en la atención del servicio.</label>
-                        <label><input class="check" type="checkbox" value="6">Confianza:ocurrió una situación que afectó la confianza
+                        <label><input class="check" name="miCheck" type="checkbox" value="Confianza:ocurrió una situación que afectó la confianza
+                            y credibilidad de la entidad.">Confianza:ocurrió una situación que afectó la confianza
                             y credibilidad de la entidad.</label>
-                        <label><input class="check" type="checkbox" value="7">Disponibilidad:el medio de atención (virtual, presencial
+                        <label><input class="check" name="miCheck" type="checkbox" value="Disponibilidad:el medio de atención (virtual, presencial
+                            o telefónico) por el que se brinda el servicio no responde a tus expectativas o tiene
+                            horarios restringidos.">Disponibilidad:el medio de atención (virtual, presencial
                             o telefónico) por el que se brinda el servicio no responde a tus expectativas o tiene
                             horarios restringidos.</label>
-                        <label><input class="check" type="checkbox" value="8">Otro</label>
+                        <label><input class="check" name="miCheck" type="checkbox" value="Otro">Otro</label>
                 </div>
 
                 <div>
                     <label>2.¿Trataron de darle una solución previa al registro del reclamo?</label>
                     <div>
-                        <input type="radio" class="check" name="solucion" value="si">si
+                        <input type="radio" class="check" name="solucion" value="si" required>si
                     </div>
                     <div>
-                        <input type="radio" class="check" name="solucion" value="no">no
+                        <input type="radio" class="check" name="solucion" value="no" required>no
                     </div>
                 </div>
 
@@ -93,7 +101,7 @@
 
 
 
-                    <textarea name="textoreclamo"  placeholder="Escriba aqui..." required></textarea>
+                    <textarea name="txtComentario"  placeholder="Escriba aqui..." required></textarea>
                 </div>
 
                 <div>
@@ -123,6 +131,7 @@
         <!--Copyright-->
         <p>Copyright © 2022</p>
     </footer>
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/reclamos.js" ></script>
 </body>
 
 </html>
