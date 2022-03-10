@@ -7,7 +7,7 @@
     $pass=$_POST['txtPassword'];
 
     echo "<h1>Registro enviado con éxito</h1>";
-    echo "<p>Nombre:  ",$txtNombre,"</p>";
+    echo "<p>Nombre:  ",$nombre,"</p>";
     echo "<p>Apellido:  ",$apellido,"</p>";
     echo "<p>codigo:  ",$codigo,"</p>";
     echo "<p>usuario:  ",$user,"</p>";
