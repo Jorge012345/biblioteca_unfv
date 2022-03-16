@@ -1,6 +1,6 @@
-const arrayHorario=[["Sector/Dia","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"],
+const arrayHorario=[ ["Sector/Dia","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"],
 ["Oficina","16:20 - 18:00","13:50 - 15:30","","16:20 - 18:00","",""],
-["Secretaría","","","16:20 - 18:00","","","18:00 - 20:45"]]
+["Secretaría","","","16:20 - 18:00","","","18:00 - 20:45"] ]
 const d=document
 const $tableHorario=d.getElementById("horario")
 let cad=""
