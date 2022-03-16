@@ -29,7 +29,10 @@
 
             if (($result = mysqli_query($connection, $query)) === false) {
                 die(mysqli_error($connection));
+            }else{
+                header("location:/BibliotecaUNFV/Terrazas%20Jorge/index.html");
             }
+            
         ?>
     </main>
 </body>
