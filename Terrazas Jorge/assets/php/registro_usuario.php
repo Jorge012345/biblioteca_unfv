@@ -14,19 +14,24 @@
             $apellido=$_POST['txtApellido'];
             $pass=$_POST['txtPassword'];
             $codigo=$_POST['txtCodigo'];
-            $dni=$_POST['txtDni'];
+            $dni=(int)$_POST['txtDni'];
             $correo=$_POST['txtCorreo'];
             $genero=$_POST['genero'];
-            echo "<h1>Registro enviado con éxito</h1>";
-            echo "<div class='parrafos'>";
-            echo "<p>Nombre:  ",$nombre,"</p>";
-            echo "<p>Apellido:  ",$apellido,"</p>";
-            echo "<p>Contraseña:  ",$pass,"</p>";
-            echo "<p>Codigo:  ",$codigo,"</p>";
-            echo "<p>DNI:  ",$dni,"</p>";
-            echo "<p>Correo:  ",$correo,"</p>";
-            echo "<p>Género:  ",$genero,"</p>";
-            echo "</div>";
+
+            $connection=mysqli_connect("localhost","root","","biblioteca");
+
+            if(!$connection){
+                echo "Error: No se pudo conectar a MySQL. Error ";
+                die;
+            }
+
+            $query="insert into usuarios ( name, lastname, password, code, dni, mail, gender ) values ('{$nombre}', '{$apellido}', '{$pass}','{$codigo}', {$dni}, '{$correo}', '{$genero}')";
+
+            if (($result = mysqli_query($connection, $query)) === false) {
+                die(mysqli_error($connection));
+            }else{
+                header("location:/BibliotecaUNFV/Terrazas%20Jorge/index.html");
+            }
             
         ?>
     </main>
