@@ -30,7 +30,6 @@
             if (($result = mysqli_query($connection, $query)) === false) {
                 die(mysqli_error($connection));
             }
-            mysqli_query($connection,$query);
         ?>
     </main>
 </body>
