@@ -27,7 +27,7 @@
             echo "<p>Nombre:  ",$nombre,"</p>";
             echo "<p>Correo:  ",$correo,"</p>";
             echo "<p>Mensaje:  ",$mensaje,"</p>";
-            echo "</div>"
+            echo "</div>";
 
             $email_message = "Detalles del formulario de consulta:<br><br>";
             $email_message .= "Nombre: " . $nombre . "<br>";
