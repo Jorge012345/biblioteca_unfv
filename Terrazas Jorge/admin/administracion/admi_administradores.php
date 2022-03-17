@@ -32,7 +32,7 @@
  
         <section>
 
-            <table >
+             <table >
                 <tr>
                      
                     <th>Id</th>
@@ -50,24 +50,26 @@
                 include ("../../assets/php/conexion.php"); 
                 $sql="select * from lista_administrador";
                 $execute=mysqli_query($conexion,$sql);
+                
                 while($fila=mysqli_fetch_assoc($execute)){
                     echo"
-                    <tr>
-                          <td>{$fila['id']}</td>
-                          <td>{$fila['nombre']}</td>
-                          <td>{$fila['apellido']}</td>
-                          <td>{$fila['codigo']}</td>
-                          <td>{$fila['usuario']}</td>
-                          <td>{$fila['email']}</td>
-                          <td>{$fila['estado']}</td>
-                          <td> 
+                     <tr>
+                        <td>{$fila['id']}</td>
+                        <td>{$fila['nombre']}</td>
+                        <td>{$fila['apellido']}</td>
+                        <td>{$fila['codigo']}</td>
+                        <td>{$fila['usuario']}</td>
+                        <td>{$fila['email']}</td>
+                        <td>{$fila['estado']}</td>
+                        <td> 
                             <div class='btn_tabla'>
-                               <input type='button' class='btn--solicitud' value='cambiar'>
+                                <a> <input type='button' class='btn--solicitud' value='Cambiar'></a>
                             </div> 
                         </td>
+                        
                         <td>
                             <div class='btn_tabla'>
-                               <input type='button' class='btn--solicitud' value='cambiar'>
+                               <a href='../../assets/php/Funciones_administrador/eliminaryactivar_admin.php?id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Eliminar' name='eliminar'></a>
                             </div> 
                        </td>
                    
@@ -77,9 +79,10 @@
                 }
                 
                 ?>
- 
-
+                
             </table>
+
+ 
         </section>
 
 

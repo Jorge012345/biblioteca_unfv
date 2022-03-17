@@ -1,3 +1,3 @@
 <?php
-$conexion= @mysqli_connect("localhost","root","","biblioteca")or die("No se establecio la conexion");
+$conexion= @mysqli_connect("localhost","root","","biblioteca_unfv")or die("No se establecio la conexion");
 ?>

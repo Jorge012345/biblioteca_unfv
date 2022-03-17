@@ -25,18 +25,12 @@
          
   
         if($resultado){
-            echo "<h1>Registro exitoso!</h1>";
-            echo "<div class='parrafos'>";
-            echo "<p>Nombre:  ",$nombre,"</p>";
-            echo "<p>Apellido:  ",$apellido,"</p>";
-            echo "<p>Codigo:  ",$codigo,"</p>";
-            echo "<p>Usuario:  ",$user,"</p>";
-            echo "<p>Correo:  ",$correo,"</p>";
-           
-            echo "</div>";
+          
+            header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_administradores.php");
+
 
         }else{
-             echo "no se guardaron los datos";
+            die(mysqli_error($connection));
          }
          
         ?>
