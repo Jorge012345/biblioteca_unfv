@@ -31,8 +31,8 @@
         <h2>Lista administradores </h2>
  
         <section>
-
-             <table >
+ 
+             <table>
                 <tr>
                      
                     <th>Id</th>
@@ -63,13 +63,13 @@
                         <td>{$fila['estado']}</td>
                         <td> 
                             <div class='btn_tabla'>
-                                <a> <input type='button' class='btn--solicitud' value='Cambiar'></a>
+                                <a href='../../assets/php/Funciones_administrador/activar_admin.php?estado=".$fila['estado']."&id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Cambiar' ></a>
                             </div> 
                         </td>
                         
                         <td>
                             <div class='btn_tabla'>
-                               <a href='../../assets/php/Funciones_administrador/eliminaryactivar_admin.php?id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Eliminar' name='eliminar'></a>
+                               <a href='../../assets/php/Funciones_administrador/eliminar_admin.php?id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Eliminar'></a>
                             </div> 
                        </td>
                    
@@ -81,7 +81,7 @@
                 ?>
                 
             </table>
-
+ 
  
         </section>
 
