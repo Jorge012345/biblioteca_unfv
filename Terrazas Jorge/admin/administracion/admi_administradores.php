@@ -54,14 +54,14 @@
                     echo"
                      <tr>
                         <td>{$fila['id']}</td>
-                        <td>{$fila['nombre']}</td>
-                        <td>{$fila['apellido']}</td>
-                        <td>{$fila['codigo']}</td>
-                        <td>{$fila['email']}</td>
-                        <td>{$fila['estado']}</td>
+                        <td>{$fila['name']}</td>
+                        <td>{$fila['lastname']}</td>
+                        <td>{$fila['code']}</td>
+                        <td>{$fila['mail']}</td>
+                        <td>{$fila['state']}</td>
                         <td> 
                             <div class='btn_tabla'>
-                                <a href='../../assets/php/Funciones_administrador/activar_admin.php?estado=".$fila['estado']."&id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Cambiar' ></a>
+                                <a href='../../assets/php/Funciones_administrador/activar_admin.php?estado=".$fila['state']."&id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Cambiar' ></a>
                             </div> 
                         </td>
                         

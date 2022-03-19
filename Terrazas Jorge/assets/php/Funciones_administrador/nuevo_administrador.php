@@ -20,7 +20,7 @@
             $estado=1;
             $tipo="admin";
 
-            $sql="INSERT INTO administradores(name,lastaname,code,state,mail,password,type) VALUES ('$nombre','$apellido','$codigo',$estado,'$correo','$pass',$tipo)";
+            $sql="INSERT INTO administradores(name,lastname,code,state,mail,password,type) VALUES ('$nombre','$apellido','$codigo',$estado,'$correo','$pass',$tipo)";
             $resultado= mysqli_query($conexion,$sql);/*ejecuta el query*/
              
     
