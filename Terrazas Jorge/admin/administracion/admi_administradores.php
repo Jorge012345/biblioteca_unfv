@@ -39,7 +39,6 @@
                     <th>Nombre</th>
                     <th>apellido</th>
                     <th>codigo</th>
-                    <th>Usuario</th>
                     <th>Email</th>
                     <th>Estado</th>
                     <th>Cambiar estado</th>
@@ -48,7 +47,7 @@
                 </tr>
                 <?php
                 include ("../../assets/php/conexion.php"); 
-                $sql="select * from lista_administrador";
+                $sql="select * from administradores";
                 $execute=mysqli_query($conexion,$sql);
                 
                 while($fila=mysqli_fetch_assoc($execute)){
@@ -58,7 +57,6 @@
                         <td>{$fila['nombre']}</td>
                         <td>{$fila['apellido']}</td>
                         <td>{$fila['codigo']}</td>
-                        <td>{$fila['usuario']}</td>
                         <td>{$fila['email']}</td>
                         <td>{$fila['estado']}</td>
                         <td> 
