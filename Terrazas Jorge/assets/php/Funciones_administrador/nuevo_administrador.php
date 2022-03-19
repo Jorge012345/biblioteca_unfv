@@ -15,16 +15,18 @@
             $nombre=$_POST['txtNombre'];
             $apellido=$_POST['txtApellido'];
             $codigo=$_POST['txtCodigo'];
-            $user=$_POST['txtUser'];
             $correo=$_POST['txtCorreo'];
             $pass=$_POST['txtPassword'];
             $estado=1;
-            $sql="INSERT INTO lista_administrador(nombre,apellido,codigo,usuario,email,pass,estado) VALUES ('$nombre','$apellido','$codigo',' $user',' $correo','$pass',$estado)";
+            $tipo="admin";
+
+            $sql="INSERT INTO administradores(name,lastaname,code,state,mail,password,type) VALUES ('$nombre','$apellido','$codigo',$estado,'$correo','$pass',$tipo)";
             $resultado= mysqli_query($conexion,$sql);/*ejecuta el query*/
              
     
             if($resultado){  
-                header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_administradores.php");
+                
+                header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.html");
     
             }else{
                 die(mysqli_error($connection));
