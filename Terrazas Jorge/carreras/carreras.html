@@ -6,31 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/include-html.js"></script>
 </head>
 <body >
-    <header class="header">
-  
-      <h1>BIBLIOTECA VIRTUAL</h1>
-  
-    </header>
-    <nav>
-      <a  href="/BibliotecaUNFV/Terrazas%20Jorge/home.html">Inicio</a>
-      <a  href="/BibliotecaUNFV/Terrazas%20Jorge/acerca_de.html">Acerca de</a>
-      <a  href="/BibliotecaUNFV/Terrazas%20Jorge/horario_atencion.html">Horario de atención</a>
-      <a  href="/BibliotecaUNFV/Terrazas%20Jorge/consulta.html">Consulta</a>
-  
-    </nav>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header.html"></div>
 
     <main>
-        <section>
+        <div>
             <h2>Carreras</h2>
             <table>
                 <tr>
                     <td>
                         <figure>
-                            <a href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_agroindustrial/ing_agroindustrial.html">
+                            <a href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_agroindustrial/ing_agroindustrial.html" class="carrera">
                                 <img src="/BibliotecaUNFV/Terrazas%20Jorge/assets/img/carreras/ing_agroindustrial/ing_agroindustrial.webp" width="400"
-                                    height="290px" alt="Ing. Ambiental" />
+                                    height="290px" alt="Ing. Agroindustrial"  />
                             </a>
                             <figcaption>Ing. Agroindustrial</figcaption>
 
@@ -38,7 +28,7 @@
                     </td>
                     <td>
                         <figure>
-                            <a href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_sistemas/ing_sistemas.html">
+                            <a class="carrera" href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_sistemas/ing_sistemas.html">
                                 <img src="/BibliotecaUNFV/Terrazas%20Jorge/assets/img/carreras/ing_sistemas/ing_sistemas.webp" width="400" height="290px"
                                     alt="Ing. Sistemas" />
                             </a>
@@ -50,7 +40,7 @@
                 <tr>
                     <td>
                         <figure>
-                            <a href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_transporte/ing_transporte.html">
+                            <a class="carrera" href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_transporte/ing_transporte.html">
                                 <img src="/BibliotecaUNFV/Terrazas%20Jorge/assets/img/carreras/ing_transporte/ing_transporte.webp" width="400" height="290px"
                                     alt="Ing. Transporte" />
                             </a>
@@ -60,7 +50,7 @@
                     </td>
                     <td>
                         <figure>
-                            <a href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_industrial/ing_industrial.html">
+                            <a class="carrera" href="/BibliotecaUNFV/Terrazas%20Jorge/carreras/ing_industrial/ing_industrial.html">
                                 <img src="/BibliotecaUNFV/Terrazas%20Jorge/assets/img/carreras/ing_industrial/ing_industrial.webp" width="400" height="290px"
                                     alt="Ing. Industrial" />
                             </a>
@@ -70,13 +60,9 @@
                     </td>
                 </tr>
             </table>
-        </section>
+        </div>
     </main>
-    <footer>
-       
-        <p><a href="/BibliotecaUNFV/Terrazas%20Jorge/index.html">Cerrar Sesión</a></p>
-        <!--Copyright-->
-        <p>Copyright © 2022</p>
-    </footer>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/carreras.js" type="module"></script>
 </body>
 </html>
