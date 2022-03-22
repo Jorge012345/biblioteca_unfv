@@ -7,21 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta</title>
     <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
+    <script src="assets/js/include-html.js"></script>
 </head>
 
 <body>
-    <header class="header">
-
-        <h1>BIBLIOTECA VIRTUAL</h1>
-
-    </header>
-    <nav>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/home.html">Inicio</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/acerca_de.html">Acerca de</a>
-        <a href="horario_atencion.html">Horario de atención</a>
-        <a href="consulta.html">Consulta</a>
-
-    </nav>
+    <div data-include="assets/header.html"></div>
     <main>
         <h2>Consulta</h2>
         <form id="form-consulta"  method="post">
@@ -58,16 +48,14 @@
             </fieldset>
 
         </form>
-       
+        <div>
+            <p id="mensaje"></p>
+        </div>
     </main>
 
 
-    <footer>
-        <p><a href="index.html">Cerrar Sesión</a></p>
-        <!--Copyright-->
-        <p>Copyright © 2022</p>
-    </footer>
-    <script src="assets/js/consulta.js" ></script>
+    <div data-include="assets/footer.html"></div>
+    <script src="assets/js/consulta.js" type="module"></script>
 </body>
 
 </html>
