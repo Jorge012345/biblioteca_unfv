@@ -33,8 +33,8 @@
             echo "<p>Autor:  ",$autor,"</p>";
             echo "<p>Fecha:  ",$fecha,"</p>";
             echo "<p>Fuente:  ",$fuente,"</p>";
-            echo"<p>Tu imagen se haguardado en nuestro sitio web.</p>";
-            echo"<p>Tu pdf se haguardado en nuestro sitio web.</p>";
+            echo"<p>Tu imagen se ha guardado en nuestro sitio web.</p>";
+            echo"<p>Tu pdf se ha guardado en nuestro sitio web.</p>";
             echo "</div>";
 
         ?>

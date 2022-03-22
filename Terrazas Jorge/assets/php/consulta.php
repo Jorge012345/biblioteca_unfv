@@ -7,6 +7,7 @@
 
             $email_subject = "Consulta desde el sitio web biblioteca unfv";
 
+
                 $nombre=$_POST['txtNombre'];
                 $correo=$_POST['txtCorreo'];
                 $mensaje=$_POST['txtComentario'];
@@ -15,6 +16,7 @@
                 $email_message .= "Nombre: " . $nombre . "<br>";
                 $email_message .= "Correo: " . $correo . "<br>";
                 $email_message .= "Mensaje: " . $mensaje . "<br>";
+
 
 
 
