@@ -10,22 +10,13 @@
     <title>Document</title>
     <link rel="shortcut icon" href="/BibliotecaUNFV/Terrazas%20Jorge//favicon/home.ico">
     <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/include-html.js"></script>
 
 </head>
 <body>
-    <header class="header">
+     
+<div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header_admin.html"></div>
 
-        <h1>BIBLIOTECA VIRTUAL ADMINISTRACION</h1>
-
-    </header>
-    <nav>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/home_admin.html">Inicio</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_alumnos.php"> Alumnos</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_administradores.php">Administradores</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.html">Nuevo Administrador</a>
-      
-
-    </nav>
 
     <main>
         <h2>Lista administradores </h2>
@@ -88,11 +79,7 @@
 
     </main>
 
-    <footer >
-        <p><a href="/BibliotecaUNFV/Terrazas%20Jorge/index.html">Cerrar Sesión</a></p>
-        <!--Copyright-->
-        <p>Copyright © 2022</p>
-    </footer>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
     
 </body>
 </html>
