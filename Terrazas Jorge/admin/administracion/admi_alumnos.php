@@ -20,41 +20,49 @@
         
         <section>
 
-            <table >
+        <table>
                 <tr>
                      
                     <th>Id</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Usuario</th>
-                    <th>Codigo</th>
+                    <th>apellido</th>
+                    <th>codigo</th>
                     <th>DNI</th>
-                    <th>Email</th>
-                    <th>Cambiar estado</th>
-                    <th>Eliminar</th>
+                    <th>Correo</th>
+                    <th>Sexo</th>
+                     <th>Eliminar</th>
 
                 </tr>
-                <tr>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td> 
-                        <div class="btn_tabla">
-                           <input type="button" class="btn--solicitud" value="cambiar">
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="btn_tabla">
-                           <input type="button" class="btn--solicitud" value="Eliminar">
-                        </div> 
-                   </td>
-                </tr>
-
-                 
+                <?php
+                include ("../../assets/php/conexion.php"); 
+                $sql="select * from usuarios";
+                $execute=mysqli_query($conexion,$sql);
+                
+                while($fila=mysqli_fetch_assoc($execute)){
+                    echo"
+                     <tr>
+                        <td>{$fila['id']}</td>
+                        <td>{$fila['name']}</td>
+                        <td>{$fila['lastname']}</td>
+                        <td>{$fila['code']}</td>
+                        <td>{$fila['dni']}</td>
+                        <td>{$fila['mail']}</td>
+                        <td>{$fila['gender']}</td>
+ 
+                        
+                        <td>
+                            <div class='btn_tabla'>
+                               <a href='../../assets/php/Funciones_administrador/eliminar_admin.php?id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Eliminar'></a>
+                            </div> 
+                       </td>
+                   
+                    </tr>
+                ";
+            
+                }
+                
+                ?>
+                
             </table>
         </section>
 
