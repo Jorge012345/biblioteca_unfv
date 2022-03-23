@@ -5,23 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta</title>
+    <title>Solicitud</title>
     <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/include-html.js"></script>
 </head>
 
 <body>
-    <header class="header">
-
-        <h1>BIBLIOTECA VIRTUAL</h1>
-
-    </header>
-    <nav>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/home.html">Inicio</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/acerca_de.html">Acerca de</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/horario_atencion.html">Horario de atención</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/consulta.html">Consulta</a>
-
-    </nav>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header.html"></div>
     <main>
         <h2>Solicitud</h2>
         <form id="form-solicitud"  method="post">
@@ -45,14 +35,14 @@
                 </div>
                 
                 <div>
-                    <label>Tipo de solicitud</label>
-                    <input list="tipos" name="txtTipo">
-                    <datalist id="tipos">
+                    <select class="inputLogin" name="txtTipo" required>
+                        <option value="Tipo" selected>Tipo</option>
                         <option value="Libro">Libro</option>
-                        <option value="Articulo">Articulo</option>
+                        <option value="Articulo" >Articulo</option>
                         <option value="Revista">Revista</option>
                         <option value="Tesis">Tesis</option>
-                    </datalist>
+                    </select>
+                    
                 </div>
                 <div>
                     <label for="codLib">Codigo del producto:</label>
@@ -79,15 +69,16 @@
 
         </form>
 
+        <div>
+            <p id="mensaje"></p>
+        </div>
+
     </main>
+    
 
-
-    <footer>
-        <p><a href="/BibliotecaUNFV/Terrazas%20Jorge/index.html">Cerrar Sesión</a></p>
-        <!--Copyright-->
-        <p>Copyright © 2022</p>
-    </footer>
-    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/solicitud.js" ></script>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
+    
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/solicitud.js" type="module"></script>
 </body>
 
 </html>

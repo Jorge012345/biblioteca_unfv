@@ -7,6 +7,10 @@
     box-sizing: border-box;
    
 }
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 
 /*----------general------------------*/
  
@@ -16,7 +20,8 @@ body{
    
     font-family: "Roboto", sans-serif;
    
-    
+    display: flex;
+    flex-direction: column;
     color: rgb(56, 78, 75);
    
     
@@ -31,27 +36,21 @@ body{
 }
 main{
     text-align: center;
-     
     margin-bottom: 160px;
 
-     
-
-    padding-top: 60px;
 
     
 }
 h2{
     text-align: center; 
-    
+    margin-top: 30px;
     color: rgb(75, 113, 129);
    
 }
  
  
-header{
-    padding-top: 1.5em; 
-    text-align: center;
-}
+
+
 input,textarea,select{
 
  
@@ -158,44 +157,58 @@ textarea {
     vertical-align: top;
 }
 
-.header{
- 
-   
-    text-align:center; 
-    
-    background-color: rgb(124, 203, 235); 
-   
-    padding-top: 1.5em; 
-   
-    padding-bottom: 3em;
-     
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 992px;
 }
 /*--------------------NAVBAR------------------------*/
-nav{
-    text-align: center; 
-   
-    width: 100%; 
- 
-    background:linear-gradient(rgb(124, 203, 235),rgb(65, 232, 238)); 
-    
-    padding-top: 15px; 
-     
-    padding-bottom: 15px; 
-     
-    font-size: 20px; 
-    
-    font-weight: 700;
-     
-    
+.header{
+    padding: 1rem;
     position: sticky;
     
     top: 0;
 
     z-index: 10;
+    
+    background-color: rgb(124, 203, 235); 
+    padding-bottom: 10px;
+     
 }
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo h1 {
+    width: 8rem;
+    height: auto;
+    
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 115%;
+}
+nav{
+   
+    background-color: rgb(124, 203, 235); 
+    
+     
+    padding-bottom: 15px; 
+     
+    
+    font-weight: 700;
+     
+    
+    
+}
+
 nav a{
     margin-right: 40px;
-     
+    transition: all .3s ease-in-out;
     position: relative;
     
 }
@@ -225,9 +238,7 @@ nav a:hover::before{
 
 
 /*-------------------HOME------------------*/
-.main-home{
-    padding-top: 0px;
-}
+
 .espacio-busqueda{
     padding-top: 60px;
     padding-bottom: 60px;
