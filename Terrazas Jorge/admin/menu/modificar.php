@@ -14,11 +14,10 @@
 <body>
     <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header_admin.html"></div>
 
-
     <main>
-        <h2>Agregar</h2>
+        <h2>Modificar</h2>
 
-        <form id="form-agregar"  method="post" enctype="multipart/form-data">
+        <form id="form-modificar" method="post" enctype="multipart/form-data">
 
             <fieldset class="contenido-solicitud">
 
@@ -39,7 +38,7 @@
 
                     <select id="especialidad" name="txtEspecialidad">
 
-                        <optgroup label="ing_agroindustrial">
+                        <optgroup label="Ing_agroindustrial">
 
                             <option value="bionegocios">Bionegocios</option>
                             <option value="gestion_recursos">Gestion de recursos hidrobiologicos</option>
@@ -47,13 +46,13 @@
                             <option value="topicos">Topicos</option>
 
                         </optgroup>
-                        <optgroup label="ing_industrial">
+                        <optgroup label="Ing_industrial">
                             <option value="ig_calidad">Ingenieria de calidad</option>
                             <option value="auto_manufactura">Automatización de la manufactura </option>
                             <option value="pye">Producto y estrategia</option>
                             <option value="mc_capi">Mercado de Capitales</option>
                         </optgroup>
-                        <optgroup label="ing_sistemas">
+                        <optgroup label="Ing_sistemas">
                             <option value="d_software">Desarrollo de software</option>
                             <option value="s_info">Seguridad informatica</option>
                             <option value="g_sistemas">Gestor de sistemas </option>
@@ -68,42 +67,54 @@
 
                         </optgroup>
 
-
-
                     </select>
                 </div>
 
                 <div>
                     <label for="codigo">Codigo</label>
-                    <input type="text" name="txtCodigo" id="codigo">
+                    <input type="text" name="txtCodigo" id="codigo" required>
                 </div>
+
 
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text" name="txtTitulo" id="titulo">
-
+                    <input type="text" name="txtTitulo" id="titulo" >
                 </div>
+
+
+
+                <div>
+                    <label for="n_titulo">Nuevo titulo</label>
+                    <input type="text" name="txtNuevoTitulo" id="n_titulo">
+                </div>
+
 
 
                 <div>
                     <label for="autor">Autor</label>
-                    <input type="text" name="txtAutor" id="autor">
+                    <input type="text" name="txtAutor">
                 </div>
 
                 <div>
-                    <label for="fecha">Fecha de publicación</label>
-                    <input type="text" name="txtFecha" id="fecha">
+                    <label for="n_autor">Nuevo autor</label>
+                    <input type="text" name="txtNuevoAutor" id="n_autor">
                 </div>
-
+ 
                 <div>
                     <label for="fuente">Fuente</label>
                     <input type="text" name="txtFuente" id="fuente">
 
                 </div>
 
+                <div>
+                    <label for="n_fuente">Nueva fuente</label>
+                    <input type="text" name="txtNuevaFuente" id="n_fuente">
+
+                </div>
+
 
                 <div>
-                    <label for="imagen"> Subir imagen </label>
+                    <label for="imagen"> Nueva imagen </label>
                     <input type="file" name="foto_admin" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4">
 
                 </div>
@@ -116,20 +127,19 @@
 
 
                 <div>
-                    <input type="submit" class="btn btn--solicitud" value="Agregar ">
+                    <input type="submit" class="btn btn--solicitud" value="Modificar ">
                     <input type="reset" class="btn btn--solicitud" value="Limpiar">
                     
                 </div>
-
             </fieldset>
+
         </form>
 
     </main>
     <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
 
 
-    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/eliminar.js" ></script>
-
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/modificar.js" ></script>
 
 </body>
 
