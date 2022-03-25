@@ -25,7 +25,6 @@
                     <label for="tipo">Tipo </label>
                     <select name="txtTipo" id="tipo">
                         <option value="articulos">Articulos</option>
-                        <option value="libros">Libros</option>
                         <option value="revistas">Revistas</option>
                         <option value="tesis">Tesis</option>
 
@@ -78,31 +77,31 @@
 
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text" name="txtTitulo" id="titulo" >
+                    <input type="text" name="txtTitulo" id="titulo" required >
                 </div>
 
 
 
                 <div>
                     <label for="n_titulo">Nuevo titulo</label>
-                    <input type="text" name="txtNuevoTitulo" id="n_titulo">
+                    <input type="text" name="txtNuevoTitulo" id="n_titulo" required>
                 </div>
 
 
 
                 <div>
                     <label for="autor">Autor</label>
-                    <input type="text" name="txtAutor">
+                    <input type="text" name="txtAutor" required>
                 </div>
 
                 <div>
                     <label for="n_autor">Nuevo autor</label>
-                    <input type="text" name="txtNuevoAutor" id="n_autor">
+                    <input type="text" name="txtNuevoAutor" id="n_autor" required>
                 </div>
  
                 <div>
                     <label for="fuente">Fuente</label>
-                    <input type="text" name="txtFuente" id="fuente">
+                    <input type="text" name="txtFuente" id="fuente" required>
 
                 </div>
 

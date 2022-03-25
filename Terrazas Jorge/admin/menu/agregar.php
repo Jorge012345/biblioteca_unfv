@@ -16,19 +16,20 @@
 
 
     <main>
+
+    
         <h2>Agregar</h2>
 
-        <form id="form-agregar"  method="post" enctype="multipart/form-data">
+        <form id="form-agregar"  method="POST" enctype="multipart/form-data">
 
             <fieldset class="contenido-solicitud">
 
                 <div>
                     <label for="tipo">Tipo </label>
                     <select name="txtTipo" id="tipo">
-                        <option value="articulos">Articulos</option>
-                        <option value="libros">Libros</option>
-                        <option value="revistas">Revistas</option>
-                        <option value="tesis">Tesis</option>
+                        <option value="articulos/2">Articulos</option>
+                        <option value="revistas/3">Revistas</option>
+                        <option value="tesis/4">Tesis</option>
 
                     </select>
                 </div>
@@ -41,30 +42,30 @@
 
                         <optgroup label="Agroindustrial">
 
-                            <option value="/ing_agroindustrial/bionegocios">Bionegocios</option>
-                            <option value="/ing_agroindustrial/gestion">Gestion de recursos hidrobiologicos</option>
-                            <option value="/ing_agroindustrial/negocios">Negocios agroindustrial</option>
-                            <option value="/ing_agroindustrial/topicos">Topicos</option>
+                            <option value="ing_agroindustrial/bionegocios/1">Bionegocios</option>
+                            <option value="ing_agroindustrial/gestion/2">Gestion de recursos hidrobiologicos</option>
+                            <option value="ing_agroindustrial/negocios/4">Negocios agroindustrial</option>
+                            <option value="ing_agroindustrial/topicos/3">Topicos</option>
 
                         </optgroup>
                         <optgroup label="Industrial">
-                            <option value="/ing_industrial/ingenieria">Ingenieria de calidad</option>
-                            <option value="/ing_industrial/automatizacion">Automatización de la manufactura </option>
-                            <option value="/ing_industrial/producto">Producto y estrategia</option>
-                            <option value="/ing_industrial/mercado">Mercado de Capitales</option>
+                            <option value="ing_industrial/ingenieria/5">Ingenieria de calidad</option>
+                            <option value="ing_industrial/automatizacion/6">Automatización de la manufactura </option>
+                            <option value="ing_industrial/producto/7">Producto y estrategia</option>
+                            <option value="ing_industrial/mercado/8">Mercado de Capitales</option>
                         </optgroup>
                         <optgroup label="Sistemas">
-                            <option value="/ing_sistemas/desarrollo_software">Desarrollo de software</option>
-                            <option value="/ing_sistemas/seguridad_informatica">Seguridad informatica</option>
-                            <option value="/ing_sistemas/gestor_sistemas">Gestor de sistemas </option>
-                            <option value="/ing_sistemas/admin_tecnologias">Administrador de tecnologias de la información</option>
+                            <option value="ing_sistemas/desarrollo_software/9">Desarrollo de software</option>
+                            <option value="ing_sistemas/seguridad_informatica/10">Seguridad informatica</option>
+                            <option value="ing_sistemas/gestor_sistemas/11">Gestor de sistemas </option>
+                            <option value="ing_sistemas/admin_tecnologias/12">Administrador de tecnologias de la información</option>
 
                         </optgroup>
                         <optgroup label="Transporte">
-                            <option value="/ing_transporte/tecnologias">Tecnologia de transporte</option>
-                            <option value="/ing_transporte/gestion">Gestion calidad</option>
-                            <option value="/ing_transporte/ingenieria">Ingenieria de mantenimiento</option>
-                            <option value="/ing_transporte/simulacion">Simulación de sistemas</option>
+                            <option value="ing_transporte/tecnologias/13">Tecnologia de transporte</option>
+                            <option value="ing_transporte/gestion/14">Gestion calidad</option>
+                            <option value="ing_transporte/ingenieria/15">Ingenieria de mantenimiento</option>
+                            <option value="ing_transporte/simulacion/16">Simulación de sistemas</option>
 
                         </optgroup>
 
@@ -75,12 +76,12 @@
 
                 <div>
                     <label for="codigo">Codigo</label>
-                    <input type="text" name="txtCodigo" id="codigo">
+                    <input type="text" name="txtCodigo" id="codigo" required>
                 </div>
 
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text" name="txtTitulo" id="titulo">
+                    <input type="text" name="txtTitulo" id="titulo" required>
 
                 </div>
 
@@ -98,7 +99,7 @@
  
                 <div>
                     <label for="imagen"> Subir imagen </label>
-                    <input type="file" name="imagen" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4">
+                    <input type="file" name="imagen" id="imagen" accept=".jpg,.jpeg,.png,.webp">
                 </div>
 
 
@@ -110,18 +111,19 @@
 
                 <div>
                     <input type="submit" class="btn btn--solicitud" value="Agregar" name="agregar">
-                    <input type="reset" class="btn btn--solicitud" value="Limpiar" name="agregar">
+                    <input type="reset" class="btn btn--solicitud" value="Limpiar">
                     
                 </div>
 
             </fieldset>
         </form>
+        <div class="alert"> <?php echo isset($alert) ? $alert: ''; ?></div>
 
     </main>
     <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
 
 
-    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/eliminar.js" ></script>
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/agregar.js" ></script>
 
 
 </body>

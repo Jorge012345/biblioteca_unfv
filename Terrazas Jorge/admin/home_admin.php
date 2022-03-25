@@ -67,14 +67,14 @@
                     
                     <td  class="btn_tabla"> 
                         <div >
-                            <a href=" <?php echo "../../assets/php/Funciones_administrador/activar_admin.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Modificar" ></a>
+                            <a href=" <?php echo "../../assets/php/Funciones_administrador/modificar.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Modificar" ></a>
                         </div> 
                     </td>
                     
                     <td class="btn_tabla">
                         <div >
-                             <a href=" <?php echo "../../assets/php/Funciones_administrador/eliminar_admin.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Eliminar"></a>
-                            </div> 
+                             <a href=" <?php echo "../../assets/php/Funciones_administrador/eliminar_e.php?id={$fila['id']}"; ?>"> <input type='button'  class="btn_tabla" value="Eliminar"></a>
+                        </div> 
                     </td>
                    
                     </tr>
