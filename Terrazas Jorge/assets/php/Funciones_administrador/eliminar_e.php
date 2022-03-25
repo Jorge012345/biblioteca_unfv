@@ -7,7 +7,7 @@
     $sql="delete from libros where id={$id}";
     $resultado= mysqli_query($conexion,$sql);
     if($resultado){
-        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/home.php");
+        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/home_admin.php");
     }else{
         die(mysqli_error($connection));
     }
