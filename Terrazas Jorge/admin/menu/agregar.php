@@ -18,7 +18,8 @@
     <main>
 
     
-        <h2>Agregar</h2>
+        <h2>Agregar</h2> <br>
+        <div class="alert">  <?php echo isset($alert) ? $alert : ''; ?></div>
 
         <form id="form-agregar"  method="POST" enctype="multipart/form-data">
 
@@ -117,7 +118,6 @@
 
             </fieldset>
         </form>
-        <div class="alert"> <?php echo isset($alert) ? $alert: ''; ?></div>
 
     </main>
     <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>

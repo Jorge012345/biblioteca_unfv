@@ -67,7 +67,7 @@
                     
                     <td  class="btn_tabla"> 
                         <div >
-                            <a href=" <?php echo "../assets/php/Funciones_administrador/modificar.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Modificar" ></a>
+                            <a href=" <?php echo "../admin/menu/modificar.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Modificar" ></a>
                         </div> 
                     </td>
                     

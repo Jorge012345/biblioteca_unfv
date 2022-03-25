@@ -16,68 +16,47 @@
 
     <main>
         <h2>Modificar</h2>
-
+        
+ 
         <form id="form-modificar" method="post" enctype="multipart/form-data">
 
             <fieldset class="contenido-solicitud">
+        <?php 
+                include ("../../assets/php/conexion.php"); 
+                $id1=(int)$_GET['id'];
 
+                $sql="select  l.name,l.author,l.source,l.code,t.name_type,es.name_specialty from libros as l
+                        inner join tipo_libro as t on l.id_type_book=t.id 
+                        inner join especialidades as es on l.id_especialidad=es.id  
+                        where l.id={$id1}" ;
+                $execute=mysqli_query($conexion,$sql);
+                while($fila=mysqli_fetch_assoc($execute))  {  
+        ?>
                 <div>
-                    <label for="tipo">Tipo </label>
-                    <select name="txtTipo" id="tipo">
-                        <option value="articulos">Articulos</option>
-                        <option value="revistas">Revistas</option>
-                        <option value="tesis">Tesis</option>
-
-                    </select>
+                    <label for="tipo">Tipo</label>
+                    <input type="text"   id="tipo" value=" <?php  echo $fila['name_type'];   ?> " disabled >
                 </div>
 
-
                 <div>
-                    <label for="especialidad">Elige especialidad</label>
-
-                    <select id="especialidad" name="txtEspecialidad">
-
-                        <optgroup label="Ing_agroindustrial">
-
-                            <option value="bionegocios">Bionegocios</option>
-                            <option value="gestion_recursos">Gestion de recursos hidrobiologicos</option>
-                            <option value="negocios_agro">Negocios agroindustrial</option>
-                            <option value="topicos">Topicos</option>
-
-                        </optgroup>
-                        <optgroup label="Ing_industrial">
-                            <option value="ig_calidad">Ingenieria de calidad</option>
-                            <option value="auto_manufactura">Automatización de la manufactura </option>
-                            <option value="pye">Producto y estrategia</option>
-                            <option value="mc_capi">Mercado de Capitales</option>
-                        </optgroup>
-                        <optgroup label="Ing_sistemas">
-                            <option value="d_software">Desarrollo de software</option>
-                            <option value="s_info">Seguridad informatica</option>
-                            <option value="g_sistemas">Gestor de sistemas </option>
-                            <option value="admin_tecnologias">Administrador de tecnologias de la información</option>
-
-                        </optgroup>
-                        <optgroup label="Transporte">
-                            <option value="t_transport">Tecnologia de transporte</option>
-                            <option value="g_calidad">Gestion calidad</option>
-                            <option value="ig_mant">Ingenieria de mantenimiento</option>
-                            <option value="simu_sistemas">Simulación de sistemas</option>
-
-                        </optgroup>
-
-                    </select>
+                    <label for="codigo">Especialidad</label>
+                    <input type="text"   id="codigo" value=" <?php  echo $fila['name_specialty'];   ?> "   disabled  >
                 </div>
-
+ 
                 <div>
                     <label for="codigo">Codigo</label>
-                    <input type="text" name="txtCodigo" id="codigo" required>
+                    <input type="text"   id="codigo" value=" <?php  echo $fila['code'];   ?> "   disabled>
                 </div>
+
+                <div>
+                    <label for="codigo">Nuevo Codigo</label>
+                    <input type="text" name="nuevoCodigo" id="codigo"    required>
+                </div>
+
 
 
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text" name="txtTitulo" id="titulo" required >
+                    <input type="text" name="txtTitulo" id="titulo" value=" <?php  echo $fila['name'];   ?> "  disabled >
                 </div>
 
 
@@ -91,17 +70,17 @@
 
                 <div>
                     <label for="autor">Autor</label>
-                    <input type="text" name="txtAutor" required>
+                    <input type="text" name="txtAutor" value=" <?php  echo $fila['author'];   ?> "   disabled>
                 </div>
 
                 <div>
                     <label for="n_autor">Nuevo autor</label>
-                    <input type="text" name="txtNuevoAutor" id="n_autor" required>
+                    <input type="text" name="txtNuevoAutor" id="n_autor"  required>
                 </div>
  
                 <div>
                     <label for="fuente">Fuente</label>
-                    <input type="text" name="txtFuente" id="fuente" required>
+                    <input type="text" name="txtFuente" id="fuente"  value=" <?php  echo $fila['source'];   ?> "  disabled>
 
                 </div>
 
@@ -130,7 +109,11 @@
                     <input type="reset" class="btn btn--solicitud" value="Limpiar">
                     
                 </div>
+
+            <?php } ?>
             </fieldset>
+
+        
 
         </form>
 

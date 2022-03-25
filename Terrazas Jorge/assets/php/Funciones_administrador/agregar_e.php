@@ -36,6 +36,7 @@
            values ('$titulo',$int_code_tipo,'$autor','$fuente','$codigo','$rutaimg2','$rutapdf2',$int_code_especialidad)";
 
         $resultado= mysqli_query($conexion,$sql);
+        $alert='';
 
         if($resultado){  
             $alert='<p>se inserto correctamente </p>';
@@ -43,6 +44,8 @@
 
         }else{
             $alert='<p>Hubo un error</p>';
+            header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/agregar.php");
+
         }
 
     }
