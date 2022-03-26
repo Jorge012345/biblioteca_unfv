@@ -27,8 +27,9 @@
         $nombre_pdf=$_FILES['pdf']['name'];
         $temporal_pdf=$_FILES['pdf']['tmp_name'];
         $rutapdf1="../../../media/carreras/{$carrera1}/especialidades/{$tipo1}/{$especialidad1}/{$nombre_pdf}";
-        move_uploaded_file($temporal_pdf,$rutapdf1);
         $rutapdf2="media/carreras/{$carrera1}/especialidades/{$tipo1}/{$especialidad1}/{$nombre_pdf}";
+
+        move_uploaded_file($temporal_pdf,$rutapdf1);
 
         include ("../../../assets/php/conexion.php"); 
 

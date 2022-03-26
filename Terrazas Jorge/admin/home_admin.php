@@ -46,7 +46,8 @@
                 </tr>
                 <?php
                 include ("../assets/php/conexion.php"); 
-                $sql="select l.id,l.name,l.author,l.source,l.code,t.name_type,l.image_book,l.pdf from libros as l inner join tipo_libro as t on l.id_type_book=t.id";
+                $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,l.image_book,l.pdf from libros as l 
+                            inner join tipo_libro as t on l.id_type_book=t.id  ORDER BY l.id ASC";
                 $execute=mysqli_query($conexion,$sql);
                 
                 while($fila=mysqli_fetch_array($execute)){
@@ -67,7 +68,7 @@
                     
                     <td  class="btn_tabla"> 
                         <div >
-                            <a href=" <?php echo "../admin/menu/modificar.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Modificar" ></a>
+                            <a href="<?php echo "../admin/menu/modificar.php?id={$fila['id']}&tipolibro={$fila['id_type_book']}&tipoespecialidad={$fila['id_especialidad']} ";?>"> <input type='button' class="btn_tabla" value="Modificar"></a>
                         </div> 
                     </td>
                     

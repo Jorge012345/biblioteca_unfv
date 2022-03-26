@@ -18,38 +18,47 @@
         <h2>Modificar</h2>
         
  
-        <form id="form-modificar" method="post" enctype="multipart/form-data">
+        <form id="form-modificar" method="POST" enctype="multipart/form-data">
 
             <fieldset class="contenido-solicitud">
         <?php 
                 include ("../../assets/php/conexion.php"); 
                 $id1=(int)$_GET['id'];
+                $codtipo=(int)$_GET['tipolibro'];
+                $id_especialidad=(int)$_GET['tipoespecialidad'];
 
-                $sql="select  l.name,l.author,l.source,l.code,t.name_type,es.name_specialty from libros as l
+                
+                $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,es.name_specialty,ca.name_career from libros as l
                         inner join tipo_libro as t on l.id_type_book=t.id 
-                        inner join especialidades as es on l.id_especialidad=es.id  
-                        where l.id={$id1}" ;
+                        inner join especialidades as es on es.id=l.id_especialidad  
+                        inner join carreras as ca on ca.id=es.id 
+                        where l.id={$id1} and l.id_type_book={$codtipo} and l.id_especialidad={$id_especialidad}" ;
                 $execute=mysqli_query($conexion,$sql);
-                while($fila=mysqli_fetch_assoc($execute))  {  
+                while($fila=mysqli_fetch_assoc($execute)){  
         ?>
                 <div>
                     <label for="tipo">Tipo</label>
-                    <input type="text"   id="tipo" value=" <?php  echo $fila['name_type'];   ?> " disabled >
+                    <input type="text"  name='ntipo'  id="ntipo" value=" <?php  echo "{$fila['name_type']}-{$fila['id_type_book']}";?> " disabled >
+                </div>
+
+                <div>
+                    <label for="carrera">Carrera</label>
+                    <input type="text" id="ncarrera" name="ncarrera" value=" <?php  echo $fila['name_career'];   ?>  " disabled>
                 </div>
 
                 <div>
                     <label for="codigo">Especialidad</label>
-                    <input type="text"   id="codigo" value=" <?php  echo $fila['name_specialty'];   ?> "   disabled  >
+                    <input type="text"   id="nespecialidad" name="nespecialidad" value="<?php  echo "{$fila['name_specialty']}-{$fila['id_especialidad']}"; ?> "   disabled  >
                 </div>
- 
+
                 <div>
-                    <label for="codigo">Codigo</label>
-                    <input type="text"   id="codigo" value=" <?php  echo $fila['code'];   ?> "   disabled>
+                    <label for="code">  Codigo</label>
+                    <input type="text" name="codigo" id="code"   value="<?php  echo $fila['code']; ?>  " disabled>
                 </div>
 
                 <div>
                     <label for="codigo">Nuevo Codigo</label>
-                    <input type="text" name="nuevoCodigo" id="codigo"    required>
+                    <input type="text" name="nCodigo" id="codigo"    required>
                 </div>
 
 
@@ -63,10 +72,8 @@
 
                 <div>
                     <label for="n_titulo">Nuevo titulo</label>
-                    <input type="text" name="txtNuevoTitulo" id="n_titulo" required>
+                    <input type="text" name="nTitulo" id="n_titulo" required>
                 </div>
-
-
 
                 <div>
                     <label for="autor">Autor</label>
@@ -75,7 +82,7 @@
 
                 <div>
                     <label for="n_autor">Nuevo autor</label>
-                    <input type="text" name="txtNuevoAutor" id="n_autor"  required>
+                    <input type="text" name="nAutor" id="n_autor"  required>
                 </div>
  
                 <div>
@@ -83,38 +90,35 @@
                     <input type="text" name="txtFuente" id="fuente"  value=" <?php  echo $fila['source'];   ?> "  disabled>
 
                 </div>
+        <?php } ?>
 
                 <div>
                     <label for="n_fuente">Nueva fuente</label>
-                    <input type="text" name="txtNuevaFuente" id="n_fuente">
+                    <input type="text" name="nFuente" id="n_fuente">
 
                 </div>
 
 
                 <div>
                     <label for="imagen"> Nueva imagen </label>
-                    <input type="file" name="foto_admin" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4">
+                    <input type="file" name="nImagen" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4,.webp">
 
                 </div>
 
 
                 <div>
                     <label for="pdf">Subir pdf</label>
-                    <input type="file" name="pdf">
+                    <input type="file" name="nPdf">
                 </div>
 
 
                 <div>
-                    <input type="submit" class="btn btn--solicitud" value="Modificar ">
+                    <input type="submit" class="btn btn--solicitud" name="modificar" value="Modificar">
                     <input type="reset" class="btn btn--solicitud" value="Limpiar">
                     
                 </div>
 
-            <?php } ?>
             </fieldset>
-
-        
-
         </form>
 
     </main>
