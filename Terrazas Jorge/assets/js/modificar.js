@@ -1,4 +1,4 @@
  
 const $form=document.getElementById("form-modificar")
 
-$form.action="../../assets/php/Funciones_administrador/aeaaaaa.php"
+$form.action="../../assets/php/Funciones_administrador/modificar_e.php"

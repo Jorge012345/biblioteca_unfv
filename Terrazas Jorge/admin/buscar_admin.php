@@ -15,24 +15,7 @@
 </head>
 <body>
      
-     <?php
-        include ("../assets/php/conexion.php"); 
-
-        $por_pagina=10;
-        if(isset($_GET['pagina'])){
-            $pagina=$_GET['pagina'];
-        }else{
-            $pagina=1;
-        }
-
-    //la pagina inicia en 0 y se multiplica $por_pagina
-        $empieza=($pagina-1)*$por_pagina;
-        //seleccionar los registros de la tabla
-        $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,l.image_book,l.pdf from libros as l 
-        inner join tipo_libro as t on l.id_type_book=t.id  ORDER BY l.id ASC LIMIT $empieza,$por_pagina";
-        $resultado=mysqli_query($conexion,$sql);
-       
-     ?>
+    
 
 
 <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header_admin.html"></div>
@@ -40,22 +23,64 @@
 
     <main>
         <h2>Menu Principal </h2>
+
+        <?php
+            include ("../assets/php/conexion.php"); 
+          
+            $busqueda1=$_REQUEST['busqueda'];
+            
+            $por_pagina=10;
+            if(isset($_GET['pagina'])){
+                $pagina=$_GET['pagina'];
+            }else{
+                $pagina=1;
+            }
+
+            $busqueda=ucfirst($busqueda1);
+            //la pagina inicia en 0 y se multiplica $por_pagina
+            $empieza=($pagina-1)*$por_pagina;
+
+        ?>
+ 
         <div class="div-agregar">
             <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/agregar.php"><input type="button" value="Agregar Nuevo" class="boton-agregar" ></a>
         </div>
-
+        
         <form action="buscar_admin.php" method="POST" >
             <div class="buscar-registro">
                 <div>
-                <input type="text" placeholder="buscar" name="busqueda">
+                <input type="text" placeholder="buscar" name="busqueda" value=" <?php echo $busqueda;?>">
                 </div>
                 <div>
                 <input type="submit"  class="boton-buscar"  value="Buscar" > 
+
                 </div>
             </div>
  
         </form>
              
+
+        <?php
+        
+        //seleccionar los registros de la busqueda
+        $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,l.image_book,l.pdf from libros as l 
+        inner join tipo_libro as t on l.id_type_book=t.id 
+        where 
+        ( l.id_type_book LIKE '%$busqueda%' OR
+          l.id_especialidad LIKE '%$busqueda%' OR
+          l.id LIKE '%$busqueda%' OR
+          l.name LIKE '%$busqueda%' OR
+          l.author LIKE '%$busqueda%' OR
+          l.source LIKE '%$busqueda%' OR
+          l.code LIKE '%$busqueda%' OR
+          t.name_type LIKE '%$busqueda%' 
+        )
+        ORDER BY l.id ASC LIMIT $empieza,$por_pagina";
+        
+        
+        $resultado=mysqli_query($conexion,$sql);
+       
+         ?>
         <section>
        
 
@@ -72,9 +97,9 @@
                     <th>Eliminar</th>
 
                 </tr>
-                <?php
-                while($fila=mysqli_fetch_array($resultado)){
-                ?>
+        <?php
+        while($fila=mysqli_fetch_array($resultado)){
+        ?>
                 <tr>
                     <td><?php echo $fila['id'];?></td>
                     <td><?php echo $fila['name'];?></td>

@@ -22,38 +22,97 @@
 
             <fieldset class="contenido-solicitud">
         <?php 
+ 
+            
                 include ("../../assets/php/conexion.php"); 
                 $id1=(int)$_GET['id'];
                 $codtipo=(int)$_GET['tipolibro'];
                 $id_especialidad=(int)$_GET['tipoespecialidad'];
 
+        
                 
                 $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,es.name_specialty,ca.name_career from libros as l
                         inner join tipo_libro as t on l.id_type_book=t.id 
                         inner join especialidades as es on es.id=l.id_especialidad  
                         inner join carreras as ca on ca.id=es.id 
                         where l.id={$id1} and l.id_type_book={$codtipo} and l.id_especialidad={$id_especialidad}" ;
-                $execute=mysqli_query($conexion,$sql);
-                while($fila=mysqli_fetch_assoc($execute)){  
+                $query=mysqli_query($conexion,$sql);
+                $row=mysqli_fetch_assoc($query); 
+
+                if(empty($row['name']) || empty($row['source']) ||  empty($row['author']) ||  empty($row['id']) || empty($row['name_type']) &&  empty($row['id_type_book']) || empty($row['name_career']) ||  empty($row['name_specialty']) || empty($row['id_especialidad']) ||  empty($row['code']))
+                {
+                    echo "<p>Hay alugun campo vacio</p>";
+                }else{
         ?>
+
+                <div>
+                     <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                </div>
+
                 <div>
                     <label for="tipo">Tipo</label>
-                    <input type="text"  name='ntipo'  id="ntipo" value=" <?php  echo "{$fila['name_type']}-{$fila['id_type_book']}";?> " disabled >
+                    <input type="text"   id="tipo" value="<?php  echo $row['name_type'];?> " disabled >                
+                </div>
+
+                <div>
+                    <label for="tipo">Tipo </label>
+                    <select name="ntipo" id="tipo">
+                        <option value="articulos/2">Articulos</option>
+                        <option value="revistas/3">Revistas</option>
+                        <option value="tesis/4">Tesis</option>
+                    </select>
                 </div>
 
                 <div>
                     <label for="carrera">Carrera</label>
-                    <input type="text" id="ncarrera" name="ncarrera" value=" <?php  echo $fila['name_career'];   ?>  " disabled>
+                    <input type="text" id="carrera"   value="<?php echo $row['name_career'];?>  " disabled>
                 </div>
 
                 <div>
-                    <label for="codigo">Especialidad</label>
-                    <input type="text"   id="nespecialidad" name="nespecialidad" value="<?php  echo "{$fila['name_specialty']}-{$fila['id_especialidad']}"; ?> "   disabled  >
+                    <label for="nespecialidad">Especialidad</label>
+                    <input type="text"   id="nespecialidad"   value="<?php  echo $row['name_specialty'] ; ?>"   disabled  >
+                 </div>
+
+                 <div>
+                    <label for="especialidad">Elige especialidad</label>
+
+                    <select id="especialidad" name="nespecialidad">
+
+                        <optgroup label="Agroindustrial">
+
+                            <option value="ing_agroindustrial/bionegocios/1">Bionegocios</option>
+                            <option value="ing_agroindustrial/gestion/2">Gestion de recursos hidrobiologicos</option>
+                            <option value="ing_agroindustrial/negocios/4">Negocios agroindustrial</option>
+                            <option value="ing_agroindustrial/topicos/3">Topicos</option>
+
+                        </optgroup>
+                        <optgroup label="Industrial">
+                            <option value="ing_industrial/ingenieria/5">Ingenieria de calidad</option>
+                            <option value="ing_industrial/automatizacion/6">Automatización de la manufactura </option>
+                            <option value="ing_industrial/producto/7">Producto y estrategia</option>
+                            <option value="ing_industrial/mercado/8">Mercado de Capitales</option>
+                        </optgroup>
+                        <optgroup label="Sistemas">
+                            <option value="ing_sistemas/desarrollo_software/9">Desarrollo de software</option>
+                            <option value="ing_sistemas/seguridad_informatica/10">Seguridad informatica</option>
+                            <option value="ing_sistemas/gestor_sistemas/11">Gestor de sistemas </option>
+                            <option value="ing_sistemas/admin_tecnologias/12">Administrador de tecnologias de la información</option>
+
+                        </optgroup>
+                        <optgroup label="Transporte">
+                            <option value="ing_transporte/tecnologias/13">Tecnologia de transporte</option>
+                            <option value="ing_transporte/gestion/14">Gestion calidad</option>
+                            <option value="ing_transporte/ingenieria/15">Ingenieria de mantenimiento</option>
+                            <option value="ing_transporte/simulacion/16">Simulación de sistemas</option>
+
+                        </optgroup>
+
+                    </select>
                 </div>
 
                 <div>
                     <label for="code">  Codigo</label>
-                    <input type="text" name="codigo" id="code"   value="<?php  echo $fila['code']; ?>  " disabled>
+                    <input type="text" name="codigo" id="code"   value="<?php  echo $row['code']; ?>  " disabled>
                 </div>
 
                 <div>
@@ -61,11 +120,9 @@
                     <input type="text" name="nCodigo" id="codigo"    required>
                 </div>
 
-
-
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text" name="txtTitulo" id="titulo" value=" <?php  echo $fila['name'];   ?> "  disabled >
+                    <input type="text"   id="titulo" value="<?php  echo $row['name']; ?> "  disabled >
                 </div>
 
 
@@ -77,7 +134,7 @@
 
                 <div>
                     <label for="autor">Autor</label>
-                    <input type="text" name="txtAutor" value=" <?php  echo $fila['author'];   ?> "   disabled>
+                    <input type="text"   value="<?php  echo $row['author']; ?> "   disabled>
                 </div>
 
                 <div>
@@ -87,21 +144,21 @@
  
                 <div>
                     <label for="fuente">Fuente</label>
-                    <input type="text" name="txtFuente" id="fuente"  value=" <?php  echo $fila['source'];   ?> "  disabled>
-
+                    <input type="text"   id="fuente"  value="<?php  echo $row['source']; ?> "  disabled>
                 </div>
-        <?php } ?>
-
+            <?php }  ?>
+            
+        
                 <div>
                     <label for="n_fuente">Nueva fuente</label>
-                    <input type="text" name="nFuente" id="n_fuente">
+                    <input type="text" name="nFuente" id="nfuente">
 
                 </div>
 
 
                 <div>
                     <label for="imagen"> Nueva imagen </label>
-                    <input type="file" name="nImagen" id="imagen" accept=".jpg,.jpeg,.png,.mp3,.mp4,.webp">
+                    <input type="file" name="nImagen" id="nimagen" accept=".jpg,.jpeg,.png,.mp3,.mp4,.webp">
 
                 </div>
 
@@ -110,13 +167,15 @@
                     <label for="pdf">Subir pdf</label>
                     <input type="file" name="nPdf">
                 </div>
-
+               
 
                 <div>
                     <input type="submit" class="btn btn--solicitud" name="modificar" value="Modificar">
                     <input type="reset" class="btn btn--solicitud" value="Limpiar">
                     
                 </div>
+
+                
 
             </fieldset>
         </form>

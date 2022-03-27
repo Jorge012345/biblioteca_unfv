@@ -419,7 +419,6 @@ figure .trasera{
     margin-top: 30px;
     width: 60%;
     margin-bottom: 6px;
-    border: 2px solid rgb(128, 236, 173);
     background-color: rgb(128, 236, 173);
     
 
@@ -523,6 +522,51 @@ figure .trasera{
     height: 45px;
      
 }
+
+.div-paginas{
+    margin-top:100px;
+    background-color:  rgb(115, 209, 193);
+    padding: 30px;
+    color: green;
+    border: 1px solid;
+    border-radius: 20px;
+    width: auto;
+ 
+}
+
+.div-paginas a{
+    width: 30px;
+    padding: 5px;
+    border: 1px solid;
+    display: inline-block;
+    border-radius: 5px;
+
+}
+
+.div-agregar,.buscar-registro{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10%;
+    flex-wrap: nowrap;
+   
+}
+
+.buscar-registro div{
+    width: 300px ;
+}
+
+.boton-agregar,.boton-buscar{
+
+    width: 150px;
+    cursor: pointer;
+    background-color: rgb(115, 209, 193);
+ }
+
+ .table-admin{
+     width: 80%;
+ }
+
+
 
 
 /*-------------FOOTER---------------------*/
