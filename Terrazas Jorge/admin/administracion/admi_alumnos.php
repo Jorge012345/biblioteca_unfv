@@ -17,7 +17,6 @@
     <main>
         <h2>Lista Alumnos</h2>
 
-        
         <section>
 
         <table>
@@ -30,7 +29,8 @@
                     <th>DNI</th>
                     <th>Correo</th>
                     <th>Sexo</th>
-                     <th>Eliminar</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
 
                 </tr>
                 <?php
@@ -39,29 +39,38 @@
                 $execute=mysqli_query($conexion,$sql);
                 
                 while($fila=mysqli_fetch_assoc($execute)){
-                    echo"
+                ?> 
                      <tr>
-                        <td>{$fila['id']}</td>
-                        <td>{$fila['name']}</td>
-                        <td>{$fila['lastname']}</td>
-                        <td>{$fila['code']}</td>
-                        <td>{$fila['dni']}</td>
-                        <td>{$fila['mail']}</td>
-                        <td>{$fila['gender']}</td>
+                        <td><?php echo $fila['id'];?></td>
+                        <td><?php echo $fila['name'];?></td>
+                        <td><?php echo $fila['lastname'];?></td>
+                        <td><?php echo $fila['code'];?></td>
+                        <td><?php echo $fila['dni'];?></td>
+                        <td><?php echo $fila['mail'];?></td>
+                        <td><?php echo $fila['gender'];?></td>
  
-                        
                         <td>
                             <div class='btn_tabla'>
-                               <a href='../../assets/php/Funciones_administrador/eliminar_admin.php?id=".$fila['id']."'> <input type='button' class='btn--solicitud' value='Eliminar'></a>
+                                <a href="../../admin/menu/modificar_alu.php?id=<?php echo $fila['id'];?>"> <input type="button" value="Modificar" class='btn--solicitud' >  </a>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class='btn_tabla'>
+                               <a href="../../assets/php/Funciones_administrador/eliminar_alumno.php?id=<?php echo $fila['id'];?>"> <input type='button' class='btn--solicitud' value='Eliminar'></a>
                             </div> 
                        </td>
-                   
+                       
+                      
                     </tr>
-                ";
             
-                }
-                
+            
+                <?php
+                    }
+
                 ?>
+                
+            
                 
             </table>
         </section>

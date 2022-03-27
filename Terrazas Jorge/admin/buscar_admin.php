@@ -49,7 +49,7 @@
         <form action="buscar_admin.php" method="POST" >
             <div class="buscar-registro">
                 <div>
-                <input type="text" placeholder="buscar" name="busqueda" value=" <?php echo $busqueda;?>">
+                <input type="text" placeholder="buscar" name="busqueda"  >
                 </div>
                 <div>
                 <input type="submit"  class="boton-buscar"  value="Buscar" > 
