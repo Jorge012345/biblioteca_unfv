@@ -136,7 +136,17 @@
             <div class="div-paginas">
                 <?php
                  $sql1="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,l.image_book,l.pdf from libros as l 
-                 inner join tipo_libro as t on l.id_type_book=t.id ";
+                 inner join tipo_libro as t on l.id_type_book=t.id   where 
+                 ( l.id_type_book LIKE '%$busqueda%' OR
+                   l.id_especialidad LIKE '%$busqueda%' OR
+                   l.id LIKE '%$busqueda%' OR
+                   l.name LIKE '%$busqueda%' OR
+                   l.author LIKE '%$busqueda%' OR
+                   l.source LIKE '%$busqueda%' OR
+                   l.code LIKE '%$busqueda%' OR
+                   t.name_type LIKE '%$busqueda%' 
+                 )
+                 ORDER BY l.id ASC";
 
                 $resultado1=mysqli_query($conexion,$sql1);
                 $total_registros=mysqli_num_rows($resultado1);
