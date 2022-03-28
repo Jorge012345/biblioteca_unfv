@@ -7,62 +7,71 @@
     <title>Document</title>
     <link rel="shortcut icon" href="/BibliotecaUNFV/Terrazas%20Jorge/favicon/home.ico">
     <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/include-html.js"></script>
 
 </head>
 <body>
-    <header class="header">
 
-        <h1>BIBLIOTECA VIRTUAL ADMINISTRACION</h1>
-
-    </header>
-    <nav>
-         <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/home_admin.html">Inicio</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_alumnos.php"> Alumnos</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_administradores.php">Administradores</a>
-        <a href="/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.html">Nuevo Administrador</a>
-    </nav>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header_admin.html"></div>
 
     <main>
         <h2>Lista Alumnos</h2>
 
-        
         <section>
 
-            <table >
+        <table>
                 <tr>
                      
                     <th>Id</th>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Usuario</th>
-                    <th>Codigo</th>
+                    <th>apellido</th>
+                    <th>codigo</th>
                     <th>DNI</th>
-                    <th>Email</th>
-                    <th>Cambiar estado</th>
+                    <th>Correo</th>
+                    <th>Sexo</th>
+                    <th>Modificar</th>
                     <th>Eliminar</th>
 
                 </tr>
-                <tr>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td> 
-                        <div class="btn_tabla">
-                           <input type="button" class="btn--solicitud" value="cambiar">
-                        </div> 
-                    </td>
-                    <td>
-                        <div class="btn_tabla">
-                           <input type="button" class="btn--solicitud" value="Eliminar">
-                        </div> 
-                   </td>
-                </tr>
+                <?php
+                include ("../../assets/php/conexion.php"); 
+                $sql="select * from usuarios";
+                $execute=mysqli_query($conexion,$sql);
+                
+                while($fila=mysqli_fetch_assoc($execute)){
+                ?> 
+                     <tr>
+                        <td><?php echo $fila['id'];?></td>
+                        <td><?php echo $fila['name'];?></td>
+                        <td><?php echo $fila['lastname'];?></td>
+                        <td><?php echo $fila['code'];?></td>
+                        <td><?php echo $fila['dni'];?></td>
+                        <td><?php echo $fila['mail'];?></td>
+                        <td><?php echo $fila['gender'];?></td>
+ 
+                        <td>
+                            <div class='btn_tabla'>
+                                <a href="../../admin/menu/modificar_alu.php?id=<?php echo $fila['id'];?>"> <input type="button" value="Modificar" class='btn--solicitud' >  </a>
+                            </div>
+                        </td>
 
-                 
+                        <td>
+                            <div class='btn_tabla'>
+                               <a href="../../assets/php/Funciones_administrador/eliminar_alumno.php?id=<?php echo $fila['id'];?>"> <input type='button' class='btn--solicitud' value='Eliminar'></a>
+                            </div> 
+                       </td>
+                       
+                      
+                    </tr>
+            
+            
+                <?php
+                    }
+
+                ?>
+                
+            
+                
             </table>
         </section>
 
@@ -71,11 +80,8 @@
 
     </main>
 
-    <footer>
-        <p><a href="/BibliotecaUNFV/Terrazas%20Jorge/index.html">Cerrar Sesión</a></p>
-        <!--Copyright-->
-        <p>Copyright © 2022</p>
-    </footer>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
+
     
 </body>
 </html>

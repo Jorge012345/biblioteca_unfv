@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas Jorge/assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        
-        <?php
-            include ("../../../assets/php/conexion.php"); 
-            $nombre=$_POST['txtNombre'];
-            $apellido=$_POST['txtApellido'];
-            $codigo=$_POST['txtCodigo'];
-            $user=$_POST['txtUser'];
-            $correo=$_POST['txtCorreo'];
-            $pass=$_POST['txtPassword'];
-            $estado=1;
-            $sql="INSERT INTO lista_administrador(nombre,apellido,codigo,usuario,email,pass,estado) VALUES ('$nombre','$apellido','$codigo',' $user',' $correo','$pass',$estado)";
-            $resultado= mysqli_query($conexion,$sql);/*ejecuta el query*/
-             
+ 
+<?php
+    include ("../../../assets/php/conexion.php"); 
+    $nombre=$_POST['txtNombre'];
+    $apellido=$_POST['txtApellido'];
+    $codigo=$_POST['txtCodigo'];
+    $correo=$_POST['txtCorreo'];
+    $pass=$_POST['txtPassword'];
+    $estado=1;
+    $tipo="admin";
+    $alert='';
+
+    $sql="insert into administradores (name, lastname, code , state , mail , password, type) values ('$nombre','$apellido','$codigo',$estado,'$correo','$pass','$tipo')";
     
-            if($resultado){  
-                header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_administradores.php");
+    $resultado= mysqli_query($conexion,$sql);/*ejecuta el query*/
+     
     
-            }else{
-                die(mysqli_error($connection));
-            }
-             
-            ?>
-            
-    </main>
-</body>
-</html>
+    if($resultado){  
+        $alert="se agrego correctamente";
+        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.php?alert={$alert}");
+    
+    }else{
+        $alert='Hubo un error';
+        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.php?alert={$alert}");   
+    }
+     
+?>
+    
+ 

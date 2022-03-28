@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/include-html.js"></script>
+
+    <link rel="stylesheet" href="/BibliotecaUNFV/Terrazas%20Jorge/assets/css/style.css">
+</head>
+
+<body>
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/header_admin.html"></div>
+
+    <main>
+        <h2>Agregar administrador </h2>
+
+        <form id="form-registro-admin"  method="post" enctype="multipart/form-data">
+            <fieldset class="contenido-solicitud">
+                
+                
+                 
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="txtNombre" required autofocus >
+                    
+                </div>
+                <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido"  name="txtApellido" required>
+                    
+                </div>
+
+                <div>
+                    <label for="codigo">Codigo:</label>
+                    <input type="text" id="codigo"  name="txtCodigo" required >
+                    
+                </div>
+
+ 
+                <div>
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="txtCorreo" required >
+                    
+                </div>
+
+                <div>
+                    <label for="contra">Contraseña:</label>
+                    <input type="password" id="contra"  name="txtPassword" required >
+                    
+                </div>
+ 
+
+                <div>
+                    <input type="submit" class="btn btn--solicitud" value="Guardar">
+                
+                    <input type="reset" class="btn btn--solicitud" value="Limpiar campos">
+
+                </div>
+
+            </fieldset>
+
+        </form>
+
+        <?php 
+        if(isset($_GET['alert'])){
+            $alert=$_GET['alert'];
+        }else{
+            $alert="";
+        } 
+        ?>
+        <div class="alert"> <p> <?php echo $alert;?></p></div>
+
+
+    </main>
+
+    <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
+
+
+    <script src="/BibliotecaUNFV/Terrazas%20Jorge/assets/js/nuevo_administrador.js" ></script>
+
+</body>
+
+</html>
