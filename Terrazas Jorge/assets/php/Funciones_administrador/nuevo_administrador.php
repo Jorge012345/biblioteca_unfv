@@ -8,6 +8,7 @@
     $pass=$_POST['txtPassword'];
     $estado=1;
     $tipo="admin";
+    $alert='';
 
     $sql="insert into administradores (name, lastname, code , state , mail , password, type) values ('$nombre','$apellido','$codigo',$estado,'$correo','$pass','$tipo')";
     
@@ -15,11 +16,12 @@
      
     
     if($resultado){  
-        
-        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.html");
+        $alert="se agrego correctamente";
+        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.php?alert={$alert}");
     
     }else{
-        die(mysqli_error($connection));
+        $alert='Hubo un error';
+        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/nuevo_administrador.php?alert={$alert}");   
     }
      
 ?>

@@ -70,7 +70,7 @@
 
                 <div>
                     <label for="nespecialidad">Especialidad</label>
-                    <input type="text"   id="nespecialidad"   value="<?php  echo $row['name_specialty'] ; ?>"   disabled  >
+                    <input type="text"   id="nespecialidad"   value="<?php  echo $row['name_specialty']; ?>"   disabled  >
                  </div>
 
                  <div>
@@ -122,7 +122,7 @@
 
                 <div>
                     <label for="titulo">Titulo</label>
-                    <input type="text"   id="titulo" value="<?php  echo $row['name']; ?> "  disabled >
+                    <input type="text"   id="titulo" value="<?php  echo $row['name'];?> "  disabled >
                 </div>
 
 

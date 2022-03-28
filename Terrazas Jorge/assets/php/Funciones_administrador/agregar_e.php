@@ -40,12 +40,12 @@
         $alert='';
 
         if($resultado){  
-            $alert='<p>se inserto correctamente </p>';
-            header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/agregar.php");
+            $alert='se inserto correctamente';
+            header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/agregar.php?alert={$alert}");
 
         }else{
-            $alert='<p>Hubo un error</p>';
-            header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/agregar.php");
+            $alert='Hubo un error';
+            header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/agregar.php?alert={$alert}");
 
         }
 

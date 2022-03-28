@@ -61,10 +61,19 @@
 
                 </div>
 
-
             </fieldset>
 
         </form>
+
+        <?php 
+        if(isset($_GET['alert'])){
+            $alert=$_GET['alert'];
+        }else{
+            $alert="";
+        } 
+        ?>
+        <div class="alert"> <p> <?php echo $alert;?></p></div>
+
 
     </main>
 

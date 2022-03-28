@@ -19,7 +19,15 @@
 
     
         <h2>Agregar</h2> <br>
-        <div class="alert">  <?php echo isset($alert) ? $alert : ''; ?></div>
+        <?php 
+        if(isset($_GET['alert'])){
+            $alert=$_GET['alert'];
+        }else{
+            $alert="";
+        } 
+        
+        ?>
+        <div class="alert"> <p> <?php echo $alert;?></p></div>
 
         <form id="form-agregar"  method="POST" enctype="multipart/form-data">
 
