@@ -14,10 +14,12 @@ if(isset($_REQUEST['modificar'])){
     $sql="update usuarios set name='{$nombre}',lastname='{$apellido}',code='{$codigo}',dni=$dni,mail='{$email}',gender='{$genero}'
             where id=$id";
     $resultado= mysqli_query($conexion,$sql);
+    $message='';
     if($resultado){
-        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/administracion/admi_alumnos.php");
+        $message="Registro actualizado";
+        header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/menu/modificar_alu.php?id={$id}&message={$message}");
     }else{
-        die(mysqli_error($connection));
+        $message="Error al actualizar";
     }
 
 

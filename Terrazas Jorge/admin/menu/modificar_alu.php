@@ -86,10 +86,17 @@
                     
                 </div>
 
-                
-
             </fieldset>
         </form>
+        
+        <?php
+        if(isset($_GET['message'])){
+            $message=$_GET['message'];
+        }else{
+            $message="";
+        }   
+        ?>
+        <div class="alert"> <p> <?php echo $message;?></p></div>
 
     </main>
     <div data-include="/BibliotecaUNFV/Terrazas%20Jorge/assets/footer.html"></div>
