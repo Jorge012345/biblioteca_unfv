@@ -114,7 +114,7 @@
                     
                     <td  class="btn_tabla"> 
                         <div >
-                            <a href="<?php echo "../admin/menu/modificar.php?id={$fila['id']}&&tipolibro={$fila['id_type_book']}&&tipoespecialidad={$fila['id_especialidad']} ";?>"> <input type='button' class="btn_tabla" value="Modificar"></a>
+                            <a href="<?php echo "../admin/menu/modificar.php?id={$fila['id']}&tipolibro={$fila['id_type_book']}&tipoespecialidad={$fila['id_especialidad']} ";?>"> <input type='button' class="btn_tabla" value="Modificar"></a>
                         </div> 
                     </td>
                     
@@ -146,7 +146,7 @@
 
                
                 for($i=1;$i<=$total_paginas;$i++){
-                    echo "<a href='home_admin.php?pagina={$i}'>{$i}</a>";
+                    echo "<a href='buscar_admin.php?pagina={$i}&busqueda={$busqueda1}'>{$i}</a>";
                 }
 
                  
