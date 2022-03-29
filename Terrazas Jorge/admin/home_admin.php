@@ -82,7 +82,7 @@
                     <td><?php echo $fila['source'];?></td>
                      <td><?php echo $fila['name_type']?></td>
                     <td> 
-                        <a href= "<?php echo "/BibliotecaUNFV/Terrazas%20Jorge/{$fila['pdf']}"; ?>">
+                        <a href= "<?php echo "/BibliotecaUNFV/Terrazas%20Jorge/{$fila['pdf']}"; ?>" target="_blank">
                             <img src=" <?php echo "/BibliotecaUNFV/Terrazas%20Jorge/{$fila['image_book']}";?>" alt='imagen' width='100' height='120'>
                         </a>
                     </td>

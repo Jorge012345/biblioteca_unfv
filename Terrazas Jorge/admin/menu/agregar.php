@@ -36,6 +36,7 @@
                 <div>
                     <label for="tipo">Tipo </label>
                     <select name="txtTipo" id="tipo">
+                        <option value="libros/1">Libros</option>
                         <option value="articulos/2">Articulos</option>
                         <option value="revistas/3">Revistas</option>
                         <option value="tesis/4">Tesis</option>

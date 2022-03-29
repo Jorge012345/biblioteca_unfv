@@ -34,7 +34,7 @@
                 $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,es.name_specialty,ca.name_career from libros as l
                         inner join tipo_libro as t on l.id_type_book=t.id 
                         inner join especialidades as es on es.id=l.id_especialidad  
-                        inner join carreras as ca on ca.id=es.id 
+                        inner join carreras as ca on ca.id=es.id_carrera 
                         where l.id={$id1} and l.id_type_book={$codtipo} and l.id_especialidad={$id_especialidad}" ;
                 $query=mysqli_query($conexion,$sql);
                 $row=mysqli_fetch_assoc($query); 
@@ -57,9 +57,11 @@
                 <div>
                     <label for="tipo">Tipo </label>
                     <select name="ntipo" id="tipo">
+                        <option value="libros/1">Libros</option>
                         <option value="articulos/2">Articulos</option>
                         <option value="revistas/3">Revistas</option>
                         <option value="tesis/4">Tesis</option>
+
                     </select>
                 </div>
 
@@ -84,7 +86,7 @@
                             <option value="ing_agroindustrial/gestion/2">Gestion de recursos hidrobiologicos</option>
                             <option value="ing_agroindustrial/negocios/4">Negocios agroindustrial</option>
                             <option value="ing_agroindustrial/topicos/3">Topicos</option>
-
+ 
                         </optgroup>
                         <optgroup label="Industrial">
                             <option value="ing_industrial/ingenieria/5">Ingenieria de calidad</option>
