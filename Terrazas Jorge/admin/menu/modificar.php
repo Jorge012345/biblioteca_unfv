@@ -17,7 +17,17 @@
     <main>
         <h2>Modificar</h2>
         
- 
+        <?php 
+        if(isset($_GET['message'])){
+            $message=$_GET['message'];
+        }else{
+            $message="";
+        } 
+        
+        ?>
+        <div> <p> <?php echo $message;?></p></div>
+
+        
         <form id="form-modificar" method="POST" enctype="multipart/form-data">
 
             <fieldset class="contenido-solicitud">
@@ -26,16 +36,12 @@
             
                 include ("../../assets/php/conexion.php"); 
                 $id1=(int)$_GET['id'];
-                $codtipo=(int)$_GET['tipolibro'];
-                $id_especialidad=(int)$_GET['tipoespecialidad'];
-
-        
                 
                 $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,es.name_specialty,ca.name_career from libros as l
                         inner join tipo_libro as t on l.id_type_book=t.id 
                         inner join especialidades as es on es.id=l.id_especialidad  
                         inner join carreras as ca on ca.id=es.id_carrera 
-                        where l.id={$id1} and l.id_type_book={$codtipo} and l.id_especialidad={$id_especialidad}" ;
+                        where l.id={$id1} " ;
                 $query=mysqli_query($conexion,$sql);
                 $row=mysqli_fetch_assoc($query); 
 

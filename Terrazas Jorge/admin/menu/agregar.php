@@ -27,7 +27,7 @@
         } 
         
         ?>
-        <div class="alert"> <p> <?php echo $alert;?></p></div>
+        <div> <p> <?php echo $alert;?></p></div>
 
         <form id="form-agregar"  method="POST" enctype="multipart/form-data">
 

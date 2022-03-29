@@ -89,7 +89,7 @@
                     
                     <td  class="btn_tabla"> 
                         <div >
-                            <a href="<?php echo "../admin/menu/modificar.php?id={$fila['id']}&tipolibro={$fila['id_type_book']}&tipoespecialidad={$fila['id_especialidad']} ";?>"> <input type='button' class="btn_tabla" value="Modificar"></a>
+                            <a href="<?php echo "../admin/menu/modificar.php?id={$fila['id']}";?>"> <input type='button' class="btn_tabla" value="Modificar"></a>
                         </div> 
                     </td>
                     
