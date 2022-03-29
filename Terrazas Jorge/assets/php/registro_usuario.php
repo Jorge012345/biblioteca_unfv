@@ -24,7 +24,7 @@
             if (!($result = mysqli_query($connection, $query))) {
                 die(mysqli_error($connection));
             }else{
-                header("location:/BibliotecaUNFV/Terrazas%20Jorge/index.php");
+                header("location:/BibliotecaUNFV/Terrazas%20Jorge/index.html");
             }
             
         ?>
