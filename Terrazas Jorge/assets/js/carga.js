@@ -119,7 +119,8 @@ export function cargarContenido(carrera,especialidad,libro,main){
                     const $table=d.createElement("table"),
                     $fragment=d.createDocumentFragment(),
                     $tr1=d.createElement("tr"),
-                    $tr2=d.createElement("tr")
+                    $tr2=d.createElement("tr"),
+                    $tr3=d.createElement("tr")
                     console.log(json[0].image)
                     json.forEach(el => {
                         i++
@@ -160,9 +161,12 @@ export function cargarContenido(carrera,especialidad,libro,main){
                         if(i<=2){
                             $tr1.appendChild($td)
                             $tr1.appendChild($td2)
-                        }else{
+                        }else if(i<=4){
                             $tr2.appendChild($td)
                             $tr2.appendChild($td2)
+                        }else if(i<=6){
+                            $tr3.appendChild($td)
+                            $tr3.appendChild($td2)
                         }
                     });
                     $h2.textContent=carrera
@@ -170,6 +174,7 @@ export function cargarContenido(carrera,especialidad,libro,main){
                     $h2_3.textContent=libro
                     $table.appendChild($tr1)
                     $table.appendChild($tr2)
+                    $table.appendChild($tr3)
                     $fragment.appendChild($h2)
                     $fragment.appendChild($h2_2)
                     $fragment.appendChild($h2_3)

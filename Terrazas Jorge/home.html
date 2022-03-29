@@ -21,8 +21,8 @@
 
     <section class="espacio-busqueda">
       <div class="busqueda">
-        <form>
-          <input class="buscar" type="text" placeholder="Ingrese el término de búsqueda" name="txtBuscar" required>
+        <form id="form-busqueda">
+          <input class="buscar" autocomplete="off" type="text" placeholder="Ingrese el término de búsqueda" name="txtBuscar" required>
           <input class="btn--busqueda" type="submit" name="btnBuscar" value=""></input>
           <i class="fa-solid fa-magnifying-glass lupa"></i>
         </form>
@@ -124,7 +124,7 @@
 
   <div data-include="assets/footer.html"></div>
   
-  
+  <script src="assets/js/buscador.js" type="module"></script>
 </body>
 
 </html>
