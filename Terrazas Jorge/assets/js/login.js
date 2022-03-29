@@ -26,7 +26,7 @@ document.addEventListener("submit", (e) => {
         }
         if (json["page"] === "admin") {
           location.href =
-            "/BibliotecaUNFV/Terrazas%20Jorge/admin/home_admin.html";
+            "/BibliotecaUNFV/Terrazas%20Jorge/admin/home_admin.php";
         }
       },
       error: (err) =>
