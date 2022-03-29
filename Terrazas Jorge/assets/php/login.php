@@ -49,7 +49,7 @@
             }
             $admin1="admin";
             
-            $query="SELECT * FROM administradores WHERE mail = '$email' AND password = '$pass' AND type = '$admin1'";
+            $query="SELECT * FROM administradores WHERE mail = '$email' AND password = '$pass' AND type = '$admin1' AND state=1";
             
             
             if (!($result = mysqli_query($connection, $query))) {
@@ -67,7 +67,7 @@
                 );
                 //header("location:/BibliotecaUNFV/Terrazas%20Jorge/admin/home_admin.html");     
             }else{
-                $message= "Error al ingresar datos en login, vuelva a intentarlo";
+                $message= "Error, vuelva a intentarlo";
                 $res=array(
                     "err"=>true,
                     "status"=>http_response_code(400),
