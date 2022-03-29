@@ -47,8 +47,9 @@
                 $message= "Error: No se pudo conectar a MySQL. Error ";
                 die;
             }
+            $admin1="admin";
             
-            $query="SELECT * FROM administradores WHERE mail = '$email' AND password = '$pass' AND type = '$type'";
+            $query="SELECT * FROM administradores WHERE mail = '$email' AND password = '$pass' AND type = '$admin1'";
             
             
             if (!($result = mysqli_query($connection, $query))) {
