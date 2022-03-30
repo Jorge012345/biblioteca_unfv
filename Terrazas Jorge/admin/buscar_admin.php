@@ -62,6 +62,8 @@
         //seleccionar los registros de la busqueda
         $sql="select l.id_type_book,l.id_especialidad,l.id,l.name,l.author,l.source,l.code,t.name_type,l.image_book,l.pdf from libros as l 
         inner join tipo_libro as t on l.id_type_book=t.id 
+        inner join especialidades as es on es.id=l.id_especialidad  
+        inner join carreras as ca on ca.id=es.id_carrera 
         where 
         ( l.id_type_book LIKE '%$busqueda%' OR
           l.id_especialidad LIKE '%$busqueda%' OR
@@ -104,7 +106,7 @@
                     <td><?php echo $fila['source'];?></td>
                      <td><?php echo $fila['name_type']?></td>
                     <td> 
-                        <a href= "<?php echo " /BibliotecaUNFV/Terrazas%20Jorge/{$fila['pdf']} "; ?>">
+                        <a href= "<?php echo " /BibliotecaUNFV/Terrazas%20Jorge/{$fila['pdf']} "; ?>" target=_blank>
                             <img src=" <?php echo "/BibliotecaUNFV/Terrazas%20Jorge/{$fila['image_book']} ";?>" alt='imagen' width='100' height='120'>
                         </a>
                     </td>
